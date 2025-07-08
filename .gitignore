@@ -1,0 +1,25 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencias
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Archivos de configuración local
+.env.local

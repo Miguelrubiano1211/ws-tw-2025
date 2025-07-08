@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Reloj Digital Interactivo</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>⏰ Reloj Digital</h1>
+        <div class="controls">
+          <button
+            id="toggle-theme"
+            class="btn btn-theme">
+            🌙
+          </button>
+          <button
+            id="settings"
+            class="btn btn-settings">
+            ⚙️
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- Sección Principal del Reloj -->
+        <section class="clock-section">
+          <div class="digital-clock">
+            <div class="time-display">
+              <span id="hours">00</span>: <span id="minutes">00</span>:
+              <span id="seconds">00</span>
+              <span
+                id="ampm"
+                class="ampm"
+                >AM</span
+              >
+            </div>
+            <div class="date-display">
+              <span id="day-name">Lunes</span>,
+              <span id="date">1 de Enero 2024</span>
+            </div>
+          </div>
+
+          <div class="clock-controls">
+            <button
+              id="format-toggle"
+              class="btn btn-format">
+              12H / 24H
+            </button>
+            <select
+              id="timezone"
+              class="timezone-select">
+              <option value="America/Bogota">Bogotá (UTC-5)</option>
+              <option value="America/New_York">Nueva York (UTC-5)</option>
+              <option value="Europe/London">Londres (UTC+0)</option>
+              <option value="Asia/Tokyo">Tokio (UTC+9)</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Pestañas de Funcionalidades -->
+        <section class="tabs-section">
+          <div class="tab-buttons">
+            <button
+              class="tab-btn active"
+              data-tab="stopwatch">
+              ⏱️ Cronómetro
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="timer">
+              ⏲️ Temporizador
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="alarm">
+              🔔 Alarmas
+            </button>
+          </div>
+
+          <!-- Cronómetro -->
+          <div
+            id="stopwatch"
+            class="tab-content active">
+            <div class="stopwatch-display">
+              <div class="time-large">
+                <span id="stopwatch-minutes">00</span>:
+                <span id="stopwatch-seconds">00</span>:
+                <span id="stopwatch-milliseconds">00</span>
+              </div>
+            </div>
+            <div class="stopwatch-controls">
+              <button
+                id="stopwatch-start"
+                class="btn btn-success">
+                ▶️ Iniciar
+              </button>
+              <button
+                id="stopwatch-pause"
+                class="btn btn-warning">
+                ⏸️ Pausar
+              </button>
+              <button
+                id="stopwatch-reset"
+                class="btn btn-danger">
+                🔄 Reiniciar
+              </button>
+              <button
+                id="stopwatch-lap"
+                class="btn btn-info">
+                📊 Vuelta
+              </button>
+            </div>
+            <div
+              id="lap-times"
+              class="lap-times"></div>
+          </div>
+
+          <!-- Temporizador -->
+          <div
+            id="timer"
+            class="tab-content">
+            <div class="timer-setup">
+              <div class="time-inputs">
+                <input
+                  type="number"
+                  id="timer-hours"
+                  min="0"
+                  max="23"
+                  value="0"
+                  placeholder="HH" />
+                <span>:</span>
+                <input
+                  type="number"
+                  id="timer-minutes"
+                  min="0"
+                  max="59"
+                  value="5"
+                  placeholder="MM" />
+                <span>:</span>
+                <input
+                  type="number"
+                  id="timer-seconds"
+                  min="0"
+                  max="59"
+                  value="0"
+                  placeholder="SS" />
+              </div>
+              <div class="preset-buttons">
+                <button
+                  class="preset-btn"
+                  data-time="300">
+                  5 min
+                </button>
+                <button
+                  class="preset-btn"
+                  data-time="600">
+                  10 min
+                </button>
+                <button
+                  class="preset-btn"
+                  data-time="900">
+                  15 min
+                </button>
+                <button
+                  class="preset-btn"
+                  data-time="1800">
+                  30 min
+                </button>
+              </div>
+            </div>
+            <div class="timer-display">
+              <div class="time-large">
+                <span id="timer-display-hours">00</span>:
+                <span id="timer-display-minutes">05</span>:
+                <span id="timer-display-seconds">00</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  id="timer-progress"
+                  class="progress-fill"></div>
+              </div>
+            </div>
+            <div class="timer-controls">
+              <button
+                id="timer-start"
+                class="btn btn-success">
+                ▶️ Iniciar
+              </button>
+              <button
+                id="timer-pause"
+                class="btn btn-warning">
+                ⏸️ Pausar
+              </button>
+              <button
+                id="timer-reset"
+                class="btn btn-danger">
+                🔄 Reiniciar
+              </button>
+            </div>
+          </div>
+
+          <!-- Alarmas -->
+          <div
+            id="alarm"
+            class="tab-content">
+            <div class="alarm-setup">
+              <div class="alarm-inputs">
+                <input
+                  type="time"
+                  id="alarm-time"
+                  required />
+                <input
+                  type="text"
+                  id="alarm-label"
+                  placeholder="Etiqueta de la alarma" />
+                <select id="alarm-sound">
+                  <option value="beep">Beep</option>
+                  <option value="bell">Campana</option>
+                  <option value="chime">Carillón</option>
+                </select>
+              </div>
+              <div class="alarm-days">
+                <label
+                  ><input
+                    type="checkbox"
+                    value="1" />
+                  Lun</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="2" />
+                  Mar</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="3" />
+                  Mié</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="4" />
+                  Jue</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="5" />
+                  Vie</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="6" />
+                  Sáb</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    value="0" />
+                  Dom</label
+                >
+              </div>
+              <button
+                id="add-alarm"
+                class="btn btn-primary">
+                ➕ Agregar Alarma
+              </button>
+            </div>
+            <div
+              id="alarm-list"
+              class="alarm-list"></div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Modal de Configuraciones -->
+      <div
+        id="settings-modal"
+        class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>⚙️ Configuraciones</h2>
+          <div class="settings-grid">
+            <div class="setting-item">
+              <label>Tema:</label>
+              <select id="theme-select">
+                <option value="light">Claro</option>
+                <option value="dark">Oscuro</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+              </select>
+            </div>
+            <div class="setting-item">
+              <label>Sonido:</label>
+              <input
+                type="checkbox"
+                id="sound-enabled"
+                checked />
+            </div>
+            <div class="setting-item">
+              <label>Notificaciones:</label>
+              <input
+                type="checkbox"
+                id="notifications-enabled"
+                checked />
+            </div>
+            <div class="setting-item">
+              <label>Formato 24h:</label>
+              <input
+                type="checkbox"
+                id="format-24h" />
+            </div>
+          </div>
+          <div class="settings-buttons">
+            <button
+              id="export-settings"
+              class="btn btn-info">
+              📤 Exportar
+            </button>
+            <button
+              id="import-settings"
+              class="btn btn-info">
+              📥 Importar
+            </button>
+            <button
+              id="reset-settings"
+              class="btn btn-danger">
+              🔄 Resetear
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de Alarma -->
+      <div
+        id="alarm-modal"
+        class="modal">
+        <div class="modal-content alarm-notification">
+          <h2>🔔 ¡Alarma!</h2>
+          <p id="alarm-message">Es hora de...</p>
+          <div class="alarm-actions">
+            <button
+              id="snooze-alarm"
+              class="btn btn-warning">
+              😴 Repetir (5 min)
+            </button>
+            <button
+              id="dismiss-alarm"
+              class="btn btn-success">
+              ✅ Descartar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

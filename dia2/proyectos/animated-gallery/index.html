@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Galería Animada - WorldSkills Training</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#">
+          <i class="fas fa-images"></i> Galería Animada
+        </a>
+        <div class="navbar-nav ms-auto">
+          <a
+            class="nav-link"
+            href="#galeria"
+            >Galería</a
+          >
+          <a
+            class="nav-link"
+            href="#contacto"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Galería de Fotografías</h1>
+        <p class="hero-subtitle">
+          Descubre el mundo a través de imágenes increíbles
+        </p>
+        <button
+          class="btn btn-primary btn-lg"
+          onclick="scrollToGallery()">
+          <i class="fas fa-camera"></i> Explorar Galería
+        </button>
+      </div>
+      <div class="hero-background"></div>
+    </header>
+
+    <main class="container my-5">
+      <section
+        id="galeria"
+        class="gallery-section">
+        <h2 class="section-title">Galería Principal</h2>
+        <div class="gallery-controls mb-4">
+          <button
+            class="btn btn-outline-primary active"
+            data-filter="all">
+            <i class="fas fa-th"></i> Todos
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            data-filter="naturaleza">
+            <i class="fas fa-leaf"></i> Naturaleza
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            data-filter="ciudad">
+            <i class="fas fa-city"></i> Ciudad
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            data-filter="retratos">
+            <i class="fas fa-user"></i> Retratos
+          </button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Naturaleza -->
+          <div
+            class="gallery-item"
+            data-category="naturaleza">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=1"
+                alt="Paisaje natural" />
+              <div class="gallery-overlay">
+                <h3>Paisaje Sereno</h3>
+                <p>Montañas al amanecer</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="naturaleza">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=2"
+                alt="Bosque" />
+              <div class="gallery-overlay">
+                <h3>Bosque Mágico</h3>
+                <p>Sendero entre árboles</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="naturaleza">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=3"
+                alt="Lago" />
+              <div class="gallery-overlay">
+                <h3>Lago Cristalino</h3>
+                <p>Reflejos perfectos</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ciudad -->
+          <div
+            class="gallery-item"
+            data-category="ciudad">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=4"
+                alt="Arquitectura" />
+              <div class="gallery-overlay">
+                <h3>Arquitectura Moderna</h3>
+                <p>Rascacielos al atardecer</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="ciudad">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=5"
+                alt="Calle" />
+              <div class="gallery-overlay">
+                <h3>Vida Urbana</h3>
+                <p>Calles llenas de energía</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="ciudad">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=6"
+                alt="Puente" />
+              <div class="gallery-overlay">
+                <h3>Puente Icónico</h3>
+                <p>Conexiones urbanas</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Retratos -->
+          <div
+            class="gallery-item"
+            data-category="retratos">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=7"
+                alt="Retrato" />
+              <div class="gallery-overlay">
+                <h3>Expresiones</h3>
+                <p>Capturando emociones</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="retratos">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=8"
+                alt="Retrato artístico" />
+              <div class="gallery-overlay">
+                <h3>Arte Humano</h3>
+                <p>Historias en rostros</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="retratos">
+            <div class="gallery-card">
+              <img
+                src="https://picsum.photos/400/300?random=9"
+                alt="Retrato natural" />
+              <div class="gallery-overlay">
+                <h3>Naturalidad</h3>
+                <p>Momentos genuinos</p>
+                <button
+                  class="btn btn-light btn-sm"
+                  onclick="openModal(this)">
+                  <i class="fas fa-eye"></i> Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal para vista ampliada -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="imageModalLabel">
+              Vista Ampliada
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              id="modalImage"
+              src=""
+              alt=""
+              class="img-fluid mb-3" />
+            <h4 id="modalTitle"></h4>
+            <p id="modalDescription"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary">
+              <i class="fas fa-heart"></i> Me gusta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p>
+          &copy; 2025 WorldSkills Training - Galería Animada. Todos los derechos
+          reservados.
+        </p>
+        <div class="social-links">
+          <a
+            href="#"
+            class="text-white me-3"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="#"
+            class="text-white me-3"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="#"
+            class="text-white me-3"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="#"
+            class="text-white"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

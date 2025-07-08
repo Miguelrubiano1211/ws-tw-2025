@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ejercicio 2 - Formulario con validaciones HTML5" />
+    <title>Ejercicio 2 - Formulario con Validaciones</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #4a90e2, #357abd);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .form-container {
+        padding: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #2c3e50;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4a90e2;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+      }
+
+      input:valid {
+        border-color: #27ae60;
+      }
+
+      input:invalid {
+        border-color: #e74c3c;
+      }
+
+      .form-help {
+        font-size: 0.875rem;
+        color: #7f8c8d;
+        margin-top: 0.25rem;
+      }
+
+      .form-error {
+        color: #e74c3c;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+      }
+
+      fieldset {
+        border: 2px solid #ecf0f1;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      legend {
+        padding: 0 1rem;
+        font-weight: 600;
+        color: #4a90e2;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .radio-item,
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .radio-item input,
+      .checkbox-item input {
+        width: auto;
+      }
+
+      .range-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .range-value {
+        font-weight: 600;
+        color: #4a90e2;
+        min-width: 50px;
+      }
+
+      .required {
+        color: #e74c3c;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 1rem;
+      }
+
+      .btn-primary {
+        background: #4a90e2;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #357abd;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #95a5a6;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #7f8c8d;
+      }
+
+      .success-message {
+        background: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        border: 1px solid #c3e6cb;
+      }
+
+      .character-counter {
+        text-align: right;
+        font-size: 0.875rem;
+        color: #7f8c8d;
+      }
+
+      @media (max-width: 768px) {
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .radio-group,
+        .checkbox-group {
+          flex-direction: column;
+        }
+
+        body {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Formulario de Registro</h1>
+        <p>Complete todos los campos requeridos para registrarse</p>
+      </div>
+
+      <div class="form-container">
+        <form
+          id="registrationForm"
+          novalidate>
+          <!-- Información Personal -->
+          <fieldset>
+            <legend>Información Personal</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">
+                  Nombre <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                  autocomplete="given-name" />
+                <div class="form-help">Solo letras, 2-50 caracteres</div>
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">
+                  Apellido <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                  autocomplete="family-name" />
+                <div class="form-help">Solo letras, 2-50 caracteres</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email"> Email <span class="required">*</span> </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email" />
+              <div class="form-help">Formato: nombre@dominio.com</div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">
+                  Teléfono <span class="required">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  pattern="[0-9+\-\s\(\)]+"
+                  autocomplete="tel" />
+                <div class="form-help">Formato: +57 300 123 4567</div>
+              </div>
+
+              <div class="form-group">
+                <label for="birthDate">
+                  Fecha de Nacimiento <span class="required">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="birthDate"
+                  name="birthDate"
+                  required
+                  min="1950-01-01"
+                  max="2006-12-31" />
+                <div class="form-help">Debe ser mayor de 18 años</div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Información Académica -->
+          <fieldset>
+            <legend>Información Académica</legend>
+
+            <div class="form-group">
+              <label for="education">
+                Nivel Educativo <span class="required">*</span>
+              </label>
+              <select
+                id="education"
+                name="education"
+                required>
+                <option value="">-- Seleccione --</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="tecnico">Técnico</option>
+                <option value="tecnologo">Tecnólogo</option>
+                <option value="universitario">Universitario</option>
+                <option value="especializacion">Especialización</option>
+                <option value="maestria">Maestría</option>
+                <option value="doctorado">Doctorado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="experience">
+                Experiencia en Programación (años)
+              </label>
+              <div class="range-container">
+                <input
+                  type="range"
+                  id="experience"
+                  name="experience"
+                  min="0"
+                  max="10"
+                  value="0"
+                  step="1" />
+                <span
+                  class="range-value"
+                  id="experienceValue"
+                  >0 años</span
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="skills"> Habilidades Técnicas </label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="html"
+                    name="skills"
+                    value="html" />
+                  <label for="html">HTML5</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="css"
+                    name="skills"
+                    value="css" />
+                  <label for="css">CSS3</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="js"
+                    name="skills"
+                    value="javascript" />
+                  <label for="js">JavaScript</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="react"
+                    name="skills"
+                    value="react" />
+                  <label for="react">React</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Información del Curso -->
+          <fieldset>
+            <legend>Información del Curso</legend>
+
+            <div class="form-group">
+              <label>
+                Modalidad Preferida <span class="required">*</span>
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="presencial"
+                    name="modalidad"
+                    value="presencial"
+                    required />
+                  <label for="presencial">Presencial</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="virtual"
+                    name="modalidad"
+                    value="virtual"
+                    required />
+                  <label for="virtual">Virtual</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="mixta"
+                    name="modalidad"
+                    value="mixta"
+                    required />
+                  <label for="mixta">Mixta</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="motivation">
+                Motivación para el Curso <span class="required">*</span>
+              </label>
+              <textarea
+                id="motivation"
+                name="motivation"
+                required
+                minlength="50"
+                maxlength="500"
+                rows="4"
+                placeholder="Explique por qué desea participar en este bootcamp..."></textarea>
+              <div class="character-counter">
+                <span id="charCount">0</span>/500 caracteres
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cv"> Curriculum Vitae (PDF) </label>
+              <input
+                type="file"
+                id="cv"
+                name="cv"
+                accept=".pdf" />
+              <div class="form-help">Formato PDF, máximo 2MB</div>
+            </div>
+          </fieldset>
+
+          <!-- Términos y Condiciones -->
+          <fieldset>
+            <legend>Términos y Condiciones</legend>
+
+            <div class="form-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                  required />
+                <label for="terms">
+                  He leído y acepto los
+                  <a
+                    href="#"
+                    target="_blank"
+                    >términos y condiciones</a
+                  >
+                  <span class="required">*</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter" />
+                <label for="newsletter">
+                  Deseo recibir información sobre futuros cursos
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Botones -->
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="btn btn-primary">
+              Enviar Registro
+            </button>
+            <button
+              type="reset"
+              class="btn btn-secondary">
+              Limpiar Formulario
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Contador de caracteres para textarea
+      const motivationTextarea = document.getElementById('motivation');
+      const charCount = document.getElementById('charCount');
+
+      motivationTextarea.addEventListener('input', function () {
+        const currentLength = this.value.length;
+        charCount.textContent = currentLength;
+
+        if (currentLength > 450) {
+          charCount.style.color = '#e74c3c';
+        } else {
+          charCount.style.color = '#7f8c8d';
+        }
+      });
+
+      // Actualizar valor del range
+      const experienceRange = document.getElementById('experience');
+      const experienceValue = document.getElementById('experienceValue');
+
+      experienceRange.addEventListener('input', function () {
+        const years = this.value;
+        experienceValue.textContent = years === '1' ? '1 año' : `${years} años`;
+      });
+
+      // Validación del formulario
+      const form = document.getElementById('registrationForm');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Validar edad
+        const birthDate = new Date(document.getElementById('birthDate').value);
+        const today = new Date();
+        const age = today.getFullYear() - birthDate.getFullYear();
+
+        if (age < 18) {
+          alert('Debe ser mayor de 18 años para registrarse');
+          return;
+        }
+
+        // Validar al menos una habilidad
+        const skills = document.querySelectorAll(
+          'input[name="skills"]:checked'
+        );
+        if (skills.length === 0) {
+          alert('Debe seleccionar al menos una habilidad técnica');
+          return;
+        }
+
+        // Simular envío exitoso
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message';
+        successMessage.innerHTML = `
+                <strong>¡Registro exitoso!</strong><br>
+                Gracias por registrarse en el Bootcamp WorldSkills. 
+                Recibirá un email de confirmación pronto.
+            `;
+
+        form.parentNode.insertBefore(successMessage, form);
+        form.style.display = 'none';
+
+        // Scroll al mensaje
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Validación en tiempo real
+      const inputs = form.querySelectorAll('input, select, textarea');
+
+      inputs.forEach(input => {
+        input.addEventListener('blur', function () {
+          if (this.checkValidity()) {
+            this.style.borderColor = '#27ae60';
+          } else {
+            this.style.borderColor = '#e74c3c';
+          }
+        });
+      });
+
+      // Reset del formulario
+      form.addEventListener('reset', function () {
+        charCount.textContent = '0';
+        experienceValue.textContent = '0 años';
+
+        // Limpiar estilos de validación
+        inputs.forEach(input => {
+          input.style.borderColor = '#ddd';
+        });
+      });
+    </script>
+  </body>
+</html>

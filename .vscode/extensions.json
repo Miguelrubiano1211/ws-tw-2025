@@ -1,0 +1,113 @@
+{
+  // 🚀 EXTENSIONES RECOMENDADAS - REACT + VITE + EXPRESS.JS + BOOTSTRAP 5.3+
+  // Configuración optimizada para WorldSkills Training
+
+  "recommendations": [
+    // ⚛️ REACT & JSX ESSENTIALS
+    "dsznajder.es7-react-js-snippets", // React snippets (rafce, imr, etc.)
+    "ms-vscode.vscode-typescript-next", // TypeScript avanzado
+    "formulahendry.auto-rename-tag", // Auto-rename paired tags
+    "formulahendry.auto-close-tag", // Auto-close paired tags
+    "christian-kohler.npm-intellisense", // NPM IntelliSense
+    "ms-vscode.vscode-json", // JSON support mejorado
+
+    // 🎨 FRONTEND DEVELOPMENT
+    "esbenp.prettier-vscode", // Prettier formatter
+    "dbaeumer.vscode-eslint", // ESLint linter
+    "zignd.html-css-class-completion", // HTML/CSS class completion
+    "pranaygp.vscode-css-peek", // CSS peek functionality
+    "ritwickdey.LiveServer", // Live Server
+    "ms-vscode.live-server", // Live Preview
+
+    // 🅱️ BOOTSTRAP 5.3+ SPECIFIC
+    "thekalinga.bootstrap4-vscode", // Bootstrap 4/5 snippets
+    "ankitcode.bootstrap-snippets", // Bootstrap snippets
+    "formulahendry.auto-close-tag", // Auto close HTML tags
+    "abusaidm.html-snippets", // HTML5 snippets
+
+    // 🔧 VITE DEVELOPMENT
+    "antfu.vite", // Vite support
+    "usernamehw.errorlens", // Error lens
+    "bradlc.vscode-tailwindcss", // Tailwind integration (opcional)
+
+    // 🌐 EXPRESS.JS & NODE.JS
+    "ms-vscode.vscode-node-azure-pack", // Node.js pack
+    "christian-kohler.path-intellisense", // Path IntelliSense
+    "ms-vscode.vscode-js-debug", // JavaScript debugger
+    "formulahendry.code-runner", // Code runner
+    "rangav.vscode-thunder-client", // Thunder Client (API testing)
+
+    // 📁 FILE & PROJECT MANAGEMENT
+    "PKief.material-icon-theme", // Material icons
+    "vscode-icons-team.vscode-icons", // VSCode icons
+    "gruntfuggly.todo-tree", // TODO tree
+    "wayou.vscode-todo-highlight", // TODO highlight
+
+    // 🎯 PRODUCTIVITY & UTILITIES
+    "GitHub.copilot", // GitHub Copilot
+    "GitHub.copilot-chat", // GitHub Copilot Chat
+    "GitHub.vscode-pull-request-github", // GitHub Pull Requests
+    "eamodio.gitlens", // GitLens
+    "mhutchie.git-graph", // Git Graph
+    "donjayamanne.githistory", // Git History
+
+    // 🔍 SEARCH & NAVIGATION
+    "alefragnani.Bookmarks", // Bookmarks
+    "ms-vscode.references-view", // References view
+
+    // 🧪 TESTING & DEBUGGING
+    "Orta.vscode-jest", // Jest testing
+    "hbenl.vscode-test-explorer", // Test Explorer
+
+    // 📝 DOCUMENTATION & MARKDOWN
+    "yzhang.markdown-all-in-one", // Markdown support
+    "shd101wyy.markdown-preview-enhanced", // Markdown preview
+    "bierner.markdown-mermaid", // Mermaid diagrams
+
+    // 🎨 STYLING & THEMES
+    "GitHub.github-vscode-theme", // GitHub theme
+    "ms-vscode.vscode-emmet", // Emmet
+
+    // 🔧 DEVELOPMENT TOOLS
+    "ms-vscode.vscode-docker", // Docker support
+    "redhat.vscode-yaml", // YAML support
+    "redhat.vscode-xml", // XML support
+
+    // 🚀 PERFORMANCE & OPTIMIZATION
+    "ms-vscode.vscode-memory-usage", // Memory usage
+
+    // 🌟 WORLDSKILLS SPECIFIC
+    "ms-vscode.vscode-web-accessibility", // Web accessibility
+    "ms-vscode.vscode-lighthouse", // Lighthouse
+
+    // 🔒 SECURITY & QUALITY
+    "SonarSource.sonarlint-vscode", // SonarLint
+
+    // 🛠️ BUILD & DEPLOYMENT
+    "ms-vscode.vscode-npm", // NPM support
+
+    // 📱 RESPONSIVE DESIGN
+    "ms-vscode.vscode-browser-preview", // Browser preview
+
+    // 🎪 SNIPPETS & TEMPLATES
+    "humao.rest-client", // REST client
+
+    // 🌐 WEB DEVELOPMENT ESSENTIALS
+    "ms-vscode.vscode-web-dev-extension-pack" // Web dev pack
+  ],
+
+  // 🚫 EXTENSIONES NO RECOMENDADAS
+  "unwantedRecommendations": [
+    // Extensiones conflictivas o redundantes
+    "ms-vscode.vscode-typescript-hero", // Conflicto con TypeScript
+    "ms-vscode.vscode-bracket-pair-colorizer", // Deprecated (built-in now)
+    "hookyqr.beautify", // Conflicto con Prettier
+    "ms-vscode.vscode-php-debug", // No necesario para este stack
+    "ms-vscode.vscode-python", // No necesario para este stack
+    "ms-vscode.vscode-java", // No necesario para este stack
+    "ms-vscode.vscode-go", // No necesario para este stack
+    "ms-vscode.vscode-rust", // No necesario para este stack
+    "ms-vscode.vscode-ruby", // No necesario para este stack
+    "ms-vscode.vscode-powershell" // No necesario para este stack
+  ]
+}

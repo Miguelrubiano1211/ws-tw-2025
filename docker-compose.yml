@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  # PostgreSQL Database (Principal)
+  postgres:
+    image: postgres:15
+    container_name: worldskills-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: worldskills_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - worldskills-network
+
+  # MySQL Database (Alternativa)
+  mysql:
+    image: mysql:8.0
+    container_name: worldskills-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: worldskills_db
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: worldskills
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - worldskills-network
+
+  # Redis Cache
+  redis:
+    image: redis:alpine
+    container_name: worldskills-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - worldskills-network
+
+  # Mailpit (para testing de emails)
+  mailpit:
+    image: axllent/mailpit
+    container_name: worldskills-mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - worldskills-network
+
+  # Adminer (interfaz web para bases de datos)
+  adminer:
+    image: adminer
+    container_name: worldskills-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - worldskills-network
+
+volumes:
+  postgres_data:
+  mysql_data:
+
+networks:
+  worldskills-network:
+    driver: bridge
