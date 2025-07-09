@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas - Día 6 DOM y Eventos</title>
+    <meta
+      name="description"
+      content="Aplicación completa de gestión de tareas con DOM y eventos" />
+    <meta
+      name="author"
+      content="WorldSkills Training" />
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="app-title">
+            <i class="fas fa-tasks"></i>
+            Lista de Tareas
+          </h1>
+          <div class="header-actions">
+            <button
+              class="btn btn-theme"
+              id="btn-theme"
+              title="Cambiar tema">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button
+              class="btn btn-stats"
+              id="btn-stats"
+              title="Estadísticas">
+              <i class="fas fa-chart-bar"></i>
+            </button>
+            <button
+              class="btn btn-export"
+              id="btn-export"
+              title="Exportar tareas">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Formulario de nueva tarea -->
+      <section class="nueva-tarea">
+        <form
+          id="form-nueva-tarea"
+          class="form-nueva-tarea">
+          <div class="input-group">
+            <input
+              type="text"
+              id="input-nueva-tarea"
+              class="input-principal"
+              placeholder="¿Qué necesitas hacer hoy?"
+              maxlength="200"
+              required />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="btn-agregar">
+              <i class="fas fa-plus"></i>
+              Agregar
+            </button>
+          </div>
+
+          <div
+            class="opciones-avanzadas"
+            id="opciones-avanzadas">
+            <div class="opcion-grupo">
+              <label
+                for="select-prioridad"
+                class="label-opcion"
+                >Prioridad:</label
+              >
+              <select
+                id="select-prioridad"
+                class="select-opcion">
+                <option value="baja">🟢 Baja</option>
+                <option
+                  value="media"
+                  selected>
+                  🟡 Media
+                </option>
+                <option value="alta">🔴 Alta</option>
+              </select>
+            </div>
+
+            <div class="opcion-grupo">
+              <label
+                for="input-categoria"
+                class="label-opcion"
+                >Categoría:</label
+              >
+              <input
+                type="text"
+                id="input-categoria"
+                class="input-opcion"
+                placeholder="ej: trabajo, personal"
+                maxlength="50" />
+            </div>
+
+            <div class="opcion-grupo">
+              <label
+                for="input-fecha"
+                class="label-opcion"
+                >Fecha límite:</label
+              >
+              <input
+                type="date"
+                id="input-fecha"
+                class="input-opcion" />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-secondary btn-opciones"
+            id="btn-opciones">
+            <i class="fas fa-cog"></i>
+            Opciones avanzadas
+          </button>
+        </form>
+      </section>
+
+      <!-- Controles de filtros y búsqueda -->
+      <section class="controles">
+        <div class="filtros">
+          <button
+            class="btn btn-filtro active"
+            data-filtro="todas">
+            <i class="fas fa-list"></i>
+            Todas (<span id="count-todas">0</span>)
+          </button>
+          <button
+            class="btn btn-filtro"
+            data-filtro="pendientes">
+            <i class="fas fa-clock"></i>
+            Pendientes (<span id="count-pendientes">0</span>)
+          </button>
+          <button
+            class="btn btn-filtro"
+            data-filtro="completadas">
+            <i class="fas fa-check"></i>
+            Completadas (<span id="count-completadas">0</span>)
+          </button>
+        </div>
+
+        <div class="busqueda">
+          <div class="input-busqueda">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="input-busqueda"
+              placeholder="Buscar tareas..."
+              maxlength="100" />
+            <button
+              class="btn btn-clear"
+              id="btn-clear-busqueda"
+              title="Limpiar búsqueda">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="ordenamiento">
+          <select
+            id="select-ordenamiento"
+            class="select-ordenamiento">
+            <option value="fecha-desc">Más recientes</option>
+            <option value="fecha-asc">Más antiguas</option>
+            <option value="prioridad-desc">Mayor prioridad</option>
+            <option value="prioridad-asc">Menor prioridad</option>
+            <option value="alfabetico">Alfabético</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Lista de tareas -->
+      <main class="lista-tareas-container">
+        <div
+          class="estadisticas"
+          id="estadisticas">
+          <div class="progreso">
+            <div class="progreso-texto">
+              <span id="progreso-completadas">0</span> de
+              <span id="progreso-total">0</span> completadas
+            </div>
+            <div class="barra-progreso">
+              <div
+                class="progreso-fill"
+                id="progreso-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <ul
+          class="lista-tareas"
+          id="lista-tareas"
+          role="list">
+          <!-- Las tareas se generarán dinámicamente aquí -->
+        </ul>
+
+        <div
+          class="mensaje-vacio"
+          id="mensaje-vacio">
+          <i class="fas fa-clipboard-list"></i>
+          <h3>No hay tareas</h3>
+          <p>Agrega una nueva tarea para comenzar</p>
+        </div>
+
+        <div
+          class="mensaje-sin-resultados"
+          id="mensaje-sin-resultados">
+          <i class="fas fa-search"></i>
+          <h3>No se encontraron tareas</h3>
+          <p>Intenta con otros términos de búsqueda</p>
+        </div>
+      </main>
+
+      <!-- Botones de acción flotantes -->
+      <div class="acciones-flotantes">
+        <button
+          class="btn btn-fab"
+          id="btn-limpiar-completadas"
+          title="Limpiar completadas">
+          <i class="fas fa-broom"></i>
+        </button>
+        <button
+          class="btn btn-fab"
+          id="btn-nueva-tarea-fab"
+          title="Nueva tarea">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div
+      class="modal"
+      id="modal-confirmacion">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Confirmar acción</h3>
+          <button
+            class="btn btn-close"
+            id="btn-close-modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modal-mensaje">
+            ¿Estás seguro de que quieres realizar esta acción?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-secondary"
+            id="btn-cancelar">
+            Cancelar
+          </button>
+          <button
+            class="btn btn-danger"
+            id="btn-confirmar">
+            Confirmar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de estadísticas -->
+    <div
+      class="modal"
+      id="modal-estadisticas">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Estadísticas de Productividad</h3>
+          <button
+            class="btn btn-close"
+            id="btn-close-stats">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div
+                class="stat-number"
+                id="stat-total">
+                0
+              </div>
+              <div class="stat-label">Total de tareas</div>
+            </div>
+            <div class="stat-item">
+              <div
+                class="stat-number"
+                id="stat-completadas">
+                0
+              </div>
+              <div class="stat-label">Completadas</div>
+            </div>
+            <div class="stat-item">
+              <div
+                class="stat-number"
+                id="stat-pendientes">
+                0
+              </div>
+              <div class="stat-label">Pendientes</div>
+            </div>
+            <div class="stat-item">
+              <div
+                class="stat-number"
+                id="stat-progreso">
+                0%
+              </div>
+              <div class="stat-label">Progreso</div>
+            </div>
+          </div>
+
+          <div class="stats-categorias">
+            <h4>Por categoría</h4>
+            <div id="stats-categorias-lista">
+              <!-- Se generará dinámicamente -->
+            </div>
+          </div>
+
+          <div class="stats-prioridades">
+            <h4>Por prioridad</h4>
+            <div id="stats-prioridades-lista">
+              <!-- Se generará dinámicamente -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-primary"
+            id="btn-cerrar-stats">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notificaciones -->
+    <div
+      class="notificaciones"
+      id="notificaciones"></div>
+
+    <!-- Overlay para modales -->
+    <div
+      class="overlay"
+      id="overlay"></div>
+
+    <!-- Atajos de teclado -->
+    <div
+      class="atajos-ayuda"
+      id="atajos-ayuda">
+      <h4>Atajos de teclado</h4>
+      <ul>
+        <li><kbd>Ctrl</kbd> + <kbd>N</kbd> - Nueva tarea</li>
+        <li><kbd>Ctrl</kbd> + <kbd>F</kbd> - Buscar</li>
+        <li><kbd>Ctrl</kbd> + <kbd>T</kbd> - Cambiar tema</li>
+        <li><kbd>Ctrl</kbd> + <kbd>S</kbd> - Exportar</li>
+        <li><kbd>Escape</kbd> - Cerrar modal</li>
+        <li><kbd>F1</kbd> - Ayuda</li>
+      </ul>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
