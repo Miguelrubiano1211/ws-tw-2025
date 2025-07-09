@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Filtros - Día 7</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">🔍 Sistema de Filtros</h1>
+        <p class="subtitle">Día 7 - JavaScript Avanzado</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="layout">
+          <!-- Panel de Filtros -->
+          <aside class="sidebar">
+            <div class="filters-container">
+              <div class="filter-header">
+                <h2>Filtros</h2>
+                <button
+                  class="btn btn-secondary"
+                  id="limpiar-filtros">
+                  Limpiar Todo
+                </button>
+              </div>
+
+              <!-- Búsqueda -->
+              <div class="filter-group">
+                <label for="busqueda">Buscar productos:</label>
+                <input
+                  type="text"
+                  id="busqueda"
+                  placeholder="Escribe para buscar..."
+                  class="filter-input" />
+              </div>
+
+              <!-- Categoría -->
+              <div class="filter-group">
+                <label for="categoria">Categoría:</label>
+                <select
+                  id="categoria"
+                  class="filter-select">
+                  <option value="">Todas las categorías</option>
+                  <option value="tecnologia">Tecnología</option>
+                  <option value="ropa">Ropa</option>
+                  <option value="hogar">Hogar</option>
+                  <option value="deportes">Deportes</option>
+                  <option value="libros">Libros</option>
+                </select>
+              </div>
+
+              <!-- Precio -->
+              <div class="filter-group">
+                <label>Rango de precio:</label>
+                <div class="price-range">
+                  <input
+                    type="range"
+                    id="precio-min"
+                    min="0"
+                    max="1000"
+                    value="0"
+                    class="range-slider" />
+                  <input
+                    type="range"
+                    id="precio-max"
+                    min="0"
+                    max="1000"
+                    value="1000"
+                    class="range-slider" />
+                  <div class="price-display">
+                    <span id="precio-min-display">$0</span>
+                    -
+                    <span id="precio-max-display">$1000</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Disponibilidad -->
+              <div class="filter-group">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="disponible"
+                    checked
+                    class="filter-checkbox" />
+                  Solo productos disponibles
+                </label>
+              </div>
+
+              <!-- Rating -->
+              <div class="filter-group">
+                <label for="rating-min">Rating mínimo:</label>
+                <select
+                  id="rating-min"
+                  class="filter-select">
+                  <option value="0">Cualquier rating</option>
+                  <option value="1">⭐ 1 estrella</option>
+                  <option value="2">⭐⭐ 2 estrellas</option>
+                  <option value="3">⭐⭐⭐ 3 estrellas</option>
+                  <option value="4">⭐⭐⭐⭐ 4 estrellas</option>
+                  <option value="5">⭐⭐⭐⭐⭐ 5 estrellas</option>
+                </select>
+              </div>
+
+              <!-- Filtros activos -->
+              <div
+                class="active-filters"
+                id="filtros-activos">
+                <h3>Filtros activos:</h3>
+                <div
+                  class="filter-tags"
+                  id="tags-filtros"></div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Contenido Principal -->
+          <section class="content">
+            <div class="toolbar">
+              <div class="results-info">
+                <span id="contador-resultados">0 productos encontrados</span>
+              </div>
+
+              <div class="sorting-controls">
+                <label for="ordenar">Ordenar por:</label>
+                <select
+                  id="ordenar"
+                  class="sort-select">
+                  <option value="nombre-asc">Nombre (A-Z)</option>
+                  <option value="nombre-desc">Nombre (Z-A)</option>
+                  <option value="precio-asc">Precio (menor a mayor)</option>
+                  <option value="precio-desc">Precio (mayor a menor)</option>
+                  <option value="rating-desc">Rating (mayor a menor)</option>
+                  <option value="fecha-desc">Más recientes</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Loading -->
+            <div
+              class="loading"
+              id="loading">
+              <div class="spinner"></div>
+              <p>Cargando productos...</p>
+            </div>
+
+            <!-- Productos -->
+            <div
+              class="products-grid"
+              id="productos-grid">
+              <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+
+            <!-- No hay resultados -->
+            <div
+              class="no-results"
+              id="no-results"
+              style="display: none">
+              <div class="no-results-icon">🔍</div>
+              <h3>No se encontraron productos</h3>
+              <p>Intenta ajustar los filtros o buscar con otros términos.</p>
+              <button
+                class="btn btn-primary"
+                id="limpiar-busqueda">
+                Limpiar filtros
+              </button>
+            </div>
+          </section>
+
+          <!-- Panel de Resumen -->
+          <aside class="summary">
+            <div class="summary-container">
+              <h3>Resumen</h3>
+
+              <div class="summary-stats">
+                <div class="stat">
+                  <span class="stat-label">Total productos:</span>
+                  <span
+                    class="stat-value"
+                    id="total-productos"
+                    >0</span
+                  >
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Mostrando:</span>
+                  <span
+                    class="stat-value"
+                    id="productos-mostrados"
+                    >0</span
+                  >
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Precio promedio:</span>
+                  <span
+                    class="stat-value"
+                    id="precio-promedio"
+                    >$0</span
+                  >
+                </div>
+              </div>
+
+              <div class="categories-breakdown">
+                <h4>Por categoría:</h4>
+                <div id="breakdown-categorias"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Sistema de Filtros - Día 7 JavaScript Avanzado</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
