@@ -1,0 +1,42 @@
+{
+  "name": "app-web-completa",
+  "version": "1.0.0",
+  "description": "Aplicación web completa usando JavaScript ES6+ - Proyecto Final Día 10",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "pnpm run serve",
+    "serve": "live-server --port=3000 --open=/",
+    "dev": "live-server --port=3000 --open=/ --watch=src/",
+    "build": "echo 'No build step needed for vanilla JS'",
+    "test": "node tests/test-runner.js",
+    "test:unit": "node tests/test-runner.js unit",
+    "test:component": "node tests/test-runner.js component",
+    "test:all": "node tests/test-runner.js all",
+    "test:watch": "nodemon tests/test-runner.js",
+    "clean": "rm -rf node_modules dist"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "modules",
+    "vanilla-js",
+    "crud",
+    "web-app",
+    "worldskills"
+  ],
+  "author": "Estudiante WorldSkills",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.5%"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
