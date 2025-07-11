@@ -1,294 +1,604 @@
-Plan de Trabajo - Bootcamp Tecnologías Web WorldSkills
-20 Días de Formación Intensiva
-¡Bienvenidos al bootcamp más emocionante de Tecnologías Web! Este plan está diseñado para transformar aprendices en desarrolladores web competitivos a nivel internacional, siguiendo los estándares WorldSkills y creando un ambiente de aprendizaje motivante y efectivo.
+# 🏆 Plan de Trabajo WorldSkills 2025 - Entrenamiento Intensivo
 
-Estructura General del Bootcamp
-Duración: 20 días laborales (lunes a sábado)
-Horario: 12:00 PM - 6:00 PM (6 horas diarias)
-Metodología: Técnica Pomodoro progresiva (25min → 40min)
-Total de horas: 120 horas de formación intensiva
+## Competencia 28-29 Julio 2025
 
-SEMANA 1: Fundamentos y Herramientas Base
+¡Bienvenidos al entrenamiento intensivo para la competencia WorldSkills 2025! Este plan está diseñado específicamente para preparar competidores de élite en las tecnologías exactas de la competencia.
 
-Día 1: Fundamentos HTML5 y Herramientas de Desarrollo
-12:00-12:45 Inauguración y presentación del bootcamp
-12:45-13:10 Configuración del entorno de desarrollo (VS Code, extensiones)
-13:10-13:35 HTML5 semántico y estructura de documentos
-13:35-13:50 DESCANSO
-13:50-14:15 Formularios HTML5 y validaciones nativas
-14:15-14:40 Introducción a Git y GitHub
-14:40-15:05 Práctica: Creación de repositorio y primer commit
-15:05-15:20 DESCANSO
-15:20-15:45 Accesibilidad web básica (ARIA labels)
-15:45-16:10 Práctica: Formulario accesible
-16:10-16:35 Introducción al bash scripting
-16:35-17:00 Configuración de autocommit script
+## 🎯 Estructura de la Competencia WorldSkills 2025
 
-Día 2: CSS3 Avanzado y Responsive Design
-12:00-12:25 CSS Grid Layout fundamentals
-12:25-12:50 CSS Flexbox mastery
-12:50-13:15 CSS Grid Areas y layouts complejos
-13:15-13:30 DESCANSO
-13:30-13:55 Responsive design y mobile-first
-13:55-14:20 CSS animations y transforms
-14:20-14:45 CSS steps() y sprite animations
-14:45-15:00 DESCANSO
-15:00-15:25 CSS custom properties (variables)
-15:25-15:50 Metodología BEM para CSS
-15:50-16:15 Práctica: Grid layout responsive
-16:15-17:00 Challenge: Recrear layouts de WorldSkills
+**📅 Fechas de Competencia:** 28-29 Julio 2025
 
-Día 3: JavaScript ES6+ Fundamentals
-12:00-12:25 Variables, const, let, template literals
-12:25-12:50 Functions, arrow functions, destructuring
-12:50-13:15 Arrays methods (map, filter, reduce)
-13:15-13:30 DESCANSO
-13:30-13:55 Objects, classes, modules
-13:55-14:20 Async/await y Promises
-14:20-14:45 Error handling y debugging
-14:45-15:00 DESCANSO
-15:00-15:25 DOM manipulation moderna
-15:25-15:50 Event handling y delegation
-15:50-16:15 Práctica: Reloj digital interactivo
-16:15-17:00 Challenge: Algoritmos de palindromos y rotación
+- **Día 1 (28 julio):** HTML/CSS Responsive + React.js + Express.js
+- **Día 2 (29 julio):** PHP/Laravel + SQLite
 
-Día 4: Validaciones y Seguridad Frontend
-12:00-12:25 Regular expressions (RegExp) mastery
-12:25-12:50 Form validation con RegExp
-12:50-13:15 XSS prevention y sanitización
-13:15-13:30 DESCANSO
-13:30-13:55 CSRF protection fundamentos
-13:55-14:20 Content Security Policy (CSP)
-14:20-14:45 Input validation y sanitización
-14:45-15:00 DESCANSO
-15:00-15:25 Secure coding practices
-15:25-15:50 Testing de validaciones
-15:50-16:15 Práctica: Sistema de validación robusto
-16:15-17:00 Challenge: Contador CSS puro (sin JS)
+## 📊 Estructura del Entrenamiento
 
-Día 5: Control de Versiones y Colaboración
-12:00-12:25 Git workflow avanzado (branching, merging)
-12:25-12:50 GitHub collaboration (pull requests, issues)
-12:50-13:15 Git hooks y automation
-13:15-13:30 DESCANSO
-13:30-13:55 Semantic versioning y releases
-13:55-14:20 Code review best practices
-14:20-14:45 CI/CD básico con GitHub Actions
-14:45-15:00 DESCANSO
-15:00-15:25 Documentation y README.md
-15:25-15:50 Licenses y open source
-15:50-16:15 Práctica: Proyecto colaborativo
-16:15-17:00 Challenge: Speed-test JS problems
+**Duración:** 12 días laborales (11-26 julio, excluyendo domingos)
+**Horario:** 12:00 PM - 6:00 PM (6 horas diarias)
+**Metodología:** Entrenamiento progresivo con simulacros reales + **Enfoque MVP**
+**Total de horas:** 72 horas de formación intensiva especializada
 
-Día 6: Introducción a Docker y Contenedores
-12:00-12:25 Conceptos de contenedores y Docker
-12:25-12:50 Dockerfile creation y best practices
-12:50-13:15 Docker images y containers management
-13:15-13:30 DESCANSO
-13:30-13:55 Docker Compose fundamentos
-13:55-14:20 Volumes y networks en Docker
-14:20-14:45 Multi-stage builds
-14:45-15:00 DESCANSO
-15:00-15:25 Docker para desarrollo frontend
-15:25-15:50 Security en Docker containers
-15:50-16:15 Práctica: Containerizar aplicación static
-16:15-17:00 Primera evaluación práctica (simulacro mini-competencia)
-SEMANA 2: Framework Frontend y APIs
+## 🚀 Metodología MVP (Minimum Viable Product)
 
-Día 7: React Fundamentals
-12:00-12:30 React conceptos y Virtual DOM
-12:30-13:00 JSX syntax y components
-13:00-13:30 Props y state management
+### **🎯 Filosofía del Entrenamiento:**
+
+Cada ejercicio, práctica y proyecto se desarrollará siguiendo la metodología **MVP**, priorizando:
+
+1. **✅ Funcionalidad Core Primero** - Lo que DEBE funcionar
+2. **⚡ Iteración Rápida** - Mejoras incrementales
+3. **🎯 Entrega Temprana** - Producto funcional lo antes posible
+4. **🔄 Feedback Continuo** - Validación y ajustes constantes
+
+### **📋 Fases MVP por Ejercicio:**
+
+#### **Phase 1: Core MVP (60% del tiempo)**
+
+- **Funcionalidad básica** que cumple el objetivo principal
+- **UI mínima** pero funcional
+- **Happy path** implementado completamente
+- **Sin optimizaciones** ni features adicionales
+
+#### **Phase 2: Enhanced MVP (30% del tiempo)**
+
+- **Validaciones** y manejo de errores básico
+- **Styling** mejorado y responsive
+- **UX enhancements** principales
+- **Testing** de funcionalidades core
+
+#### **Phase 3: Polished MVP (10% del tiempo)**
+
+- **Optimizaciones** de performance
+- **Features adicionales** si el tiempo lo permite
+- **Polish final** y refinamientos
+- **Documentation** y comentarios
+
+### **⏱️ Time Boxing por Ejercicio:**
+
+```
+🟢 MVP Core:     Primera versión funcional (60% tiempo)
+🟡 MVP Enhanced: Mejoras y validaciones (30% tiempo)
+🔴 MVP Polish:   Optimizaciones finales (10% tiempo)
+```
+
+### **🏆 Mentalidad Competitiva MVP:**
+
+- **"Done is better than perfect"** - Entregar algo funcional es mejor que algo perfecto incompleto
+- **"Time management wins"** - Gestión del tiempo es clave en WorldSkills
+- **"Iterate fast, fail fast"** - Ciclos rápidos de desarrollo y corrección
+- **"Core features first"** - Las funcionalidades principales tienen prioridad absoluta
+
+## 🗓️ CRONOGRAMA DE ENTRENAMIENTO
+
+### **SEMANA 1: Fundamentos HTML/CSS + React (11-16 Julio)**
+
+#### **Día 1 (Viernes 11 Julio): HTML5 Semántico y CSS Grid/Flexbox**
+
+**🎯 Objetivo:** Dominar layouts complejos con CSS Grid y Flexbox para competencia
+**🚀 Enfoque MVP:** Funcionalidad de layout → Responsive → Optimización
+
+```
+12:00-12:30 Configuración del entorno (VS Code + extensiones especializadas)
+12:30-13:00 HTML5 semántico avanzado y estructura de documentos
+13:00-13:30 CSS Grid Layout mastery (areas, tracks, gaps)
 13:30-13:45 DESCANSO
-13:45-14:15 Event handling en React
-14:15-14:45 Conditional rendering y lists
-14:45-15:15 Forms en React (controlled components)
+13:45-14:15 CSS Flexbox advanced patterns
+14:15-14:45 Responsive design mobile-first
+14:45-15:15 CSS custom properties y metodología BEM
 15:15-15:30 DESCANSO
-15:30-16:00 React Hooks (useState, useEffect)
-16:00-16:30 Custom hooks creation
-16:30-17:00 Práctica: Dashboard interactivo
+15:30-16:00 🎯 MVP PRÁCTICA: Layout complejo responsive
+    Phase 1 (20min): Core layout funcional - Grid básico
+    Phase 2 (10min): Responsive breakpoints principales
+    Phase 3 (5min): Polish y microinteracciones
+16:00-16:30 🏆 MVP SIMULACRO: Recrear layout WorldSkills
+    Phase 1: Estructura y layout principal (18min)
+    Phase 2: Responsive y ajustes (10min)
+    Phase 3: Detalles finales (2min)
+16:30-17:00 ⚡ MVP SPEED TEST: 3 layouts en 30 minutos
+    Layout 1 MVP: 8 minutos (funcional básico)
+    Layout 2 MVP: 10 minutos (+ responsive)
+    Layout 3 MVP: 12 minutos (+ animaciones básicas)
+```
 
-Día 8: React Advanced Patterns
-12:00-12:30 useContext y Context API
-12:30-13:00 useReducer para state complejo
-13:00-13:30 Error boundaries y error handling
+#### **Día 2 (Sábado 12 Julio): CSS Avanzado y Animaciones**
+
+**🎯 Objetivo:** Efectos visuales y animaciones para interfaces competitivas
+
+```
+12:00-12:30 CSS Animations y @keyframes
+12:30-13:00 CSS Transforms 2D/3D
+13:00-13:30 CSS Transitions y timing functions
 13:30-13:45 DESCANSO
-13:45-14:15 React.memo y performance optimization
-14:15-14:45 useCallback y useMemo
-14:45-15:15 Code splitting y lazy loading
+13:45-14:15 CSS pseudo-elementos y pseudo-clases
+14:15-14:45 CSS clipping y masking
+14:45-15:15 CSS filters y blend modes
 15:15-15:30 DESCANSO
-15:30-16:00 Testing con React Testing Library
-16:00-16:30 Accessibility en React (ARIA)
-16:30-17:00 Práctica: App con múltiples contexts
+15:30-16:00 Práctica: Loading animations y microinteractions
+16:00-16:30 Challenge: Efectos hover complejos
+16:30-17:00 Speed test: 5 animaciones en 30 minutos
+```
 
-Día 9: React Router y Navigation
-12:00-12:30 React Router setup y basic routing
-12:30-13:00 Dynamic routing y URL parameters
-13:00-13:30 Nested routes y layouts
+#### **Día 3 (Lunes 14 Julio): JavaScript ES6+ para React**
+
+**🎯 Objetivo:** JavaScript moderno esencial para React competitivo
+
+```
+12:00-12:30 ES6+ features (destructuring, spread, modules)
+12:30-13:00 Array methods avanzados (map, filter, reduce, find)
+13:00-13:30 Async/await y Promise handling
 13:30-13:45 DESCANSO
-13:45-14:15 Programmatic navigation
-14:15-14:45 Route guards y protected routes
-14:45-15:15 Query parameters y search
+13:45-14:15 DOM manipulation moderna y eventos
+14:15-14:45 Fetch API y manejo de errores
+14:45-15:15 Local Storage y Session Storage
 15:15-15:30 DESCANSO
-15:30-16:00 History API y browser navigation
-16:00-16:30 SEO considerations para SPAs
-16:30-17:00 Práctica: Multi-page React app
+15:30-16:00 Práctica: App vanilla JS interactiva
+16:00-16:30 Algoritmos: palíndromos, ordenamiento, búsqueda
+16:30-17:00 Speed test: 5 problemas JS en 30 minutos
+```
 
-Día 10: Node.js y Express.js Fundamentals
-12:00-12:30 Node.js runtime y npm ecosystem
-12:30-13:00 pnpm setup y package management
-13:00-13:30 Express.js server creation
+#### **Día 4 (Martes 15 Julio): React Fundamentals Intensivo**
+
+**🎯 Objetivo:** React básico optimizado para competencia
+**🚀 Enfoque MVP:** Componente funcional → Props/State → Interactividad
+
+```
+12:00-12:30 React setup con Vite (rápido y moderno)
+12:30-13:00 JSX syntax y componentes funcionales
+13:00-13:30 Props y state con useState
 13:30-13:45 DESCANSO
-13:45-14:15 Middleware concepts y custom middleware
-14:15-14:45 Routing y route parameters
-14:45-15:15 Request/Response handling
+13:45-14:15 Event handling y formularios controlados
+14:15-14:45 Conditional rendering y listas con keys
+14:45-15:15 Component composition y children props
 15:15-15:30 DESCANSO
-15:30-16:00 Error handling middleware
-16:00-16:30 Logging y debugging
-16:30-17:00 Práctica: REST API básica
+15:30-16:00 🎯 MVP PRÁCTICA: Todo App básica
+    Phase 1 (20min): Add/Delete todos (core functionality)
+    Phase 2 (8min): Mark complete/incomplete
+    Phase 3 (2min): Local storage persistence
+16:00-16:30 🏆 MVP PRÁCTICA: Shopping Cart Component
+    Phase 1 (18min): Add/remove items, show total
+    Phase 2 (10min): Quantity controls, item validation
+    Phase 3 (2min): Animation and polish
+16:30-17:00 ⚡ EVALUACIÓN MVP: Component React completo
+    Funcionalidad core (20min) → Enhanced features (8min) → Polish (2min)
+```
 
-Día 11: APIs REST y Database Integration
-12:00-12:30 REST principles y HTTP methods
-12:30-13:00 SQLite setup y básico
-13:00-13:30 SQL queries y data modeling
+13:45-14:15 Event handling y forms controlados
+14:15-14:45 Conditional rendering y list rendering
+14:45-15:15 useEffect para side effects
+15:15-15:30 DESCANSO
+15:30-16:00 Práctica: Todo App con localStorage
+16:00-16:30 Component composition patterns
+16:30-17:00 Speed test: Componente complejo en 30 minutos
+
+```
+
+#### **Día 5 (Miércoles 16 Julio): React Hooks Avanzado**
+
+**🎯 Objetivo:** Hooks modernos para aplicaciones competitivas
+
+```
+
+12:00-12:30 useContext para state global
+12:30-13:00 useReducer para estado complejo
+13:00-13:30 Custom hooks creation
 13:30-13:45 DESCANSO
-13:45-14:15 ORM basics (mejor3 o similar para SQLite)
-14:15-14:45 CRUD operations implementation
-14:45-15:15 Data validation en backend
+13:45-14:15 useCallback y useMemo optimization
+14:15-14:45 React.memo y performance patterns
+14:45-15:15 Error boundaries y error handling
 15:15-15:30 DESCANSO
-15:30-16:00 API documentation con Swagger
-16:00-16:30 Postman testing y automation
-16:30-17:00 Práctica: API completa con database
+15:30-16:00 Práctica: Dashboard con múltiples hooks
+16:00-16:30 Testing básico con React Testing Library
+16:30-17:00 Speed test: Hook personalizado en 30 minutos
 
-Día 12: Security y Authentication
-12:00-12:30 Authentication vs Authorization
-12:30-13:00 JWT tokens y implementation
-13:00-13:30 Password hashing (bcrypt)
+```
+
+#### **Día 6 (Jueves 17 Julio): React Router y SPA Completa**
+
+**🎯 Objetivo:** Navegación y routing para aplicaciones de competencia
+
+```
+
+12:00-12:30 React Router setup y configuración
+12:30-13:00 Routes, Route y Link components
+13:00-13:30 Dynamic routing y useParams
 13:30-13:45 DESCANSO
-13:45-14:15 Rate limiting y DDoS protection
-14:15-14:45 CORS configuration
-14:45-15:15 Input validation y sanitization
+13:45-14:15 Nested routes y Outlet
+14:15-14:45 Protected routes y authentication
+14:45-15:15 Programmatic navigation (useNavigate)
 15:15-15:30 DESCANSO
-15:30-16:00 SQL injection prevention
-16:00-16:30 Security headers y best practices
-16:30-17:00 Segunda evaluación práctica (API segura)
+15:30-16:00 Práctica: Multi-page app con routing
+16:00-16:30 SEO básico para SPAs
+16:30-17:00 EVALUACIÓN: App React completa
 
-SEMANA 3: Integración Full-Stack y Optimización
+```
 
-Día 13: Frontend-Backend Integration ✅ COMPLETADO
-12:00-12:30 Fetch API y async data loading ✅
-12:30-13:00 Error handling en peticiones HTTP ✅
-13:00-13:30 Loading states y UX patterns ✅
+### **SEMANA 2: Express.js + PHP/Laravel (17-23 Julio)**
+
+#### **Día 7 (Viernes 18 Julio): Express.js Fundamentos y APIs**
+
+**🎯 Objetivo:** Express.js para APIs RESTful que consume React
+
+```
+
+12:00-12:30 Express.js setup y configuración básica
+12:30-13:00 Routing y middleware fundamentals
+13:00-13:30 REST API design patterns
 13:30-13:45 DESCANSO
-13:45-14:15 Axios setup y interceptors ✅
-14:15-14:45 Cache strategies (localStorage, sessionStorage) ✅
-14:45-15:15 Offline-first approaches ✅
+13:45-14:15 Request/Response handling
+14:15-14:45 Middleware personalizado y error handling
+14:45-15:15 CORS y conexión con React frontend
 15:15-15:30 DESCANSO
-15:30-16:00 Real-time updates (WebSockets basic) ✅
-16:00-16:30 API pagination y infinite scroll ✅
-16:30-17:00 Práctica: App completa integrada ✅
+15:30-16:00 Práctica: API básica para React app
+16:00-16:30 Authentication con JWT básico
+16:30-17:00 Testing de endpoints con Postman/Insomnia
 
-Día 14: Testing y Quality Assurance
-12:00-12:30 Testing philosophy y TDD
-12:30-13:00 Unit testing con Jest
-13:00-13:30 Integration testing
+```
+
+#### **Día 8 (Sábado 19 Julio): PHP 8+ Moderno y Fundamentos**
+
+#### **Día 8 (Sábado 19 Julio): PHP 8+ Moderno y Fundamentos**
+
+**🎯 Objetivo:** PHP moderno optimizado para Laravel
+
+```
+
+12:00-12:30 PHP 8+ features (union types, attributes, match)
+12:30-13:00 OOP avanzado (classes, interfaces, traits)
+13:00-13:30 Namespaces y PSR-4 autoloading
 13:30-13:45 DESCANSO
-13:45-14:15 E2E testing basics
-14:15-14:45 Code coverage y quality metrics
-14:45-15:15 Linting (ESLint) y formatting (Prettier)
+13:45-14:15 Error handling y exceptions
+14:15-14:45 File handling y streams
+14:45-15:15 JSON manipulation y APIs
 15:15-15:30 DESCANSO
-15:30-16:00 Performance testing
-16:00-16:30 Accessibility testing (axe-core)
-16:30-17:00 Práctica: Test suite completa
+15:30-16:00 Práctica: Sistema de archivos PHP
+16:00-16:30 Security basics (filter_var, validation)
+16:30-17:00 Speed test: 5 funciones PHP en 30 minutos
 
-Día 15: Performance Optimization
-12:00-12:30 Performance metrics y Web Vitals
-12:30-13:00 Bundle optimization (Webpack/Vite)
-13:00-13:30 Code splitting strategies
+```
+
+#### **Día 9 (Lunes 21 Julio): Laravel Setup y Arquitectura**
+
+**🎯 Objetivo:** Laravel setup perfecto para competencia
+
+```
+
+12:00-12:30 Laravel installation con Composer
+12:30-13:00 Estructura de proyecto Laravel
+13:00-13:30 Artisan commands esenciales
 13:30-13:45 DESCANSO
-13:45-14:15 Image optimization y lazy loading
-14:15-14:45 Caching strategies (browser y server)
-14:45-15:15 CDN usage y asset optimization
+13:45-14:15 Routing y Route groups
+14:15-14:45 Controllers y Resource controllers
+14:45-15:15 Middleware creation y usage
 15:15-15:30 DESCANSO
-15:30-16:00 Database query optimization
-16:00-16:30 Monitoring y profiling tools
-16:30-17:00 Práctica: Optimización completa
+15:30-16:00 Views y Blade templating
+16:00-16:30 Layouts y componentes Blade
+16:30-17:00 Práctica: CRUD básico con Blade
 
-Día 16: Deployment y DevOps
-12:00-12:30 Docker Compose para full-stack
-12:30-13:00 Production builds y environment variables
-13:00-13:30 Reverse proxy con Nginx
+```
+
+#### **Día 9 (Lunes 21 Julio): Laravel Setup y Arquitectura**
+
+**🎯 Objetivo:** Laravel setup perfecto para competencia
+
+```
+
+12:00-12:30 Laravel installation con Composer
+12:30-13:00 Estructura de directorios y arquitectura MVC
+13:00-13:30 Artisan commands básicos
 13:30-13:45 DESCANSO
-13:45-14:15 SSL/TLS certificates
-14:15-14:45 Domain configuration y DNS
-14:45-15:15 Monitoring y logging en producción
+13:45-14:15 Configuración environment (.env)
+14:15-14:45 Database configuration (SQLite)
+14:45-15:15 Routes básicas y Route model binding
 15:15-15:30 DESCANSO
-15:30-16:00 Backup strategies
-16:00-16:30 CI/CD pipeline completo
-16:30-17:00 Práctica: Deploy completo
+15:30-16:00 Controllers y resource controllers
+16:00-16:30 Middleware y service providers
+16:30-17:00 Práctica: CRUD básico con Laravel
 
-Día 17: Mobile-First y PWA
-12:00-12:30 Mobile-first design principles
-12:30-13:00 Touch interfaces y gestures
-13:00-13:30 Responsive images y viewport
+```
+
+#### **Día 10 (Martes 22 Julio): Eloquent ORM y SQLite**
+
+**🎯 Objetivo:** Database mastery con Eloquent y SQLite
+
+```
+
+12:00-12:30 SQLite setup y configuración
+12:30-13:00 Migrations y Schema builder
+13:00-13:30 Seeders y Factories
 13:30-13:45 DESCANSO
-13:45-14:15 Progressive Web Apps (PWA)
-14:15-14:45 Service Workers y offline capability
-14:45-15:15 App manifest y installation
+13:45-14:15 Eloquent Models y relationships
+14:15-14:45 Query Builder avanzado
+14:45-15:15 Collections y data manipulation
 15:15-15:30 DESCANSO
-15:30-16:00 Push notifications
-16:00-16:30 Performance en mobile
-16:30-17:00 Práctica: Mobile app completa
+15:30-16:00 Práctica: Sistema blog con relaciones
+16:00-16:30 Mass assignment y fillable
+16:30-17:00 Speed test: 3 modelos relacionados
 
-Día 18: Advanced Topics y Troubleshooting
-12:00-12:30 Advanced Git (rebase, cherry-pick)
-12:30-13:00 Debugging complex issues
-13:00-13:30 Memory leaks y performance issues
+```
+
+#### **Día 11 (Miércoles 23 Julio): Formularios y Validaciones Laravel**
+
+**🎯 Objetivo:** Formularios robustos con validación completa
+
+```
+
+12:00-12:30 Form creation con Blade
+12:30-13:00 Request validation y Form Requests
+13:00-13:30 Custom validation rules
 13:30-13:45 DESCANSO
-13:45-14:15 Browser compatibility
-14:15-14:45 Polyfills y fallbacks
-14:45-15:15 Internationalization (i18n)
+13:45-14:15 File uploads y storage
+14:15-14:45 CSRF protection y security
+14:45-15:15 Flash messages y session handling
 15:15-15:30 DESCANSO
-15:30-16:00 A/B testing setup
-16:00-16:30 Analytics integration
-16:30-17:00 Tercera evaluación práctica (proyecto integrado)
-SEMANA 4: Simulacros de Competencia WorldSkills
+15:30-16:00 Práctica: Formulario complejo con uploads
+16:00-16:30 API resources y JSON responses
+16:30-17:00 Speed test: CRUD completo en 30 minutos
 
-Día 19: Simulacro Completo - Speed Test
-12:00-12:15 Briefing y setup del ambiente de competencia
-12:15-15:15 SIMULACRO SPEED-TEST (3 horas continuas)
-Recreación exacta de tareas WorldSkills
-10 challenges técnicos progresivos
-Time pressure real de competencia
+```
+
+#### **Día 11 (Miércoles 23 Julio): Laravel API y Authentication**
+
+**🎯 Objetivo:** APIs REST y autenticación para competencia
+
+```
+
+12:00-12:30 API Routes y Resource controllers
+12:30-13:00 JSON responses y error handling
+13:00-13:30 Laravel Sanctum authentication
+13:30-13:45 DESCANSO
+13:45-14:15 Middleware de autenticación
+14:15-14:45 Rate limiting y throttling
+14:45-15:15 API testing con Postman
 15:15-15:30 DESCANSO
-15:30-16:30 Code review y feedback inmediato
-16:30-17:00 Análisis de errores y mejoras
+15:30-16:00 Práctica: API completa con auth
+16:00-16:30 CORS configuration
+16:30-17:00 EVALUACIÓN: Laravel API completa
 
-Día 20: Simulacro Final - Proyecto Frontend Completo
-12:00-12:15 Briefing proyecto medallería olímpica
-12:15-16:15 SIMULACRO PROYECTO COMPLETO (4 horas)
-Aplicación móvil completa
-Consumo de API REST
-7 páginas interconectadas
-Evaluación con rúbrica WorldSkills
-16:15-16:30 DESCANSO
-16:30-17:00 Ceremonia de clausura y certificación
-Metodología de Evaluación Continua
-Cada día incluirá:
+```
 
-Evaluación formativa durante las prácticas
-Rúbricas específicas para cada competencia
-Feedback inmediato tipo competencia
-Autoevaluación y reflexión
-Peer review entre aprendices
-Herramientas y Recursos
-Plataforma: Visual Studio Code + extensiones
-Versionado: Git + GitHub
-Contenedores: Docker + Docker Compose
-Testing: Jest + React Testing Library
-Calidad: ESLint + Prettier + Husky
-Deployment: Nginx + SSL
-Gestión: pnpm + scripts automatizados
-Este plan garantiza una formación integral que combina excelencia técnica, soft skills, y preparación específica para competencias internacionales, manteniendo siempre un ambiente motivante y de crecimiento personal.
+#### **Día 12 (Jueves 24 Julio): Laravel Avanzado y Optimización**
 
-¿Estás listo para comenzar con la ejecución detallada del Día 1? ¡Vamos a crear algo extraordinario juntos! 🚀
+**🎯 Objetivo:** Features avanzadas para competencia profesional
+
+```
+
+12:00-12:30 Service Providers y Dependency Injection
+12:30-13:00 Events y Listeners
+13:00-13:30 Queues y Jobs básicos
+13:30-13:45 DESCANSO
+13:45-14:15 Caching strategies
+14:15-14:45 Database optimization
+14:45-15:15 Testing con PHPUnit
+15:15-15:30 DESCANSO
+15:30-16:00 Práctica: Feature completa optimizada
+16:00-16:30 Deployment preparation
+16:30-17:00 Code review y best practices
+
+```
+
+### **DÍAS FINALES: Simulacros de Competencia (25-26 Julio)**
+
+#### **Día 13 (Viernes 25 Julio): SIMULACRO DÍA 1 - HTML/CSS/React/Express.js**
+
+**🎯 Objetivo:** Simulacro exacto del día 1 de competencia
+
+```
+
+12:00-12:15 Setup ambiente de competencia
+12:15-15:15 SIMULACRO COMPLETO DÍA 1 (3 horas)
+
+- Layout responsive complejo
+- Componentes React interactivos
+- Animaciones CSS avanzadas
+- Formularios con validación
+- API consumption
+  15:15-15:30 DESCANSO
+  15:30-16:30 Code review y mejoras
+  16:30-17:00 Análisis de tiempo y estrategias
+
+```
+
+#### **Día 14 (Sábado 26 Julio): SIMULACRO DÍA 2 - PHP/Laravel**
+
+**🎯 Objetivo:** Simulacro exacto del día 2 de competencia
+
+```
+
+12:00-12:15 Setup ambiente de competencia
+12:15-15:15 SIMULACRO COMPLETO DÍA 2 (3 horas)
+
+- Laravel application completa
+- CRUD con SQLite
+- Authentication system
+- API endpoints
+- File uploads
+- Admin dashboard
+  15:15-15:30 DESCANSO
+  15:30-16:30 Code review y optimizaciones
+  16:30-17:00 Preparación final y estrategia competencia
+
+````
+
+## 🛠️ Herramientas y Tecnologías Específicas
+
+### **Para Día 1 de Competencia (HTML/CSS/React/Express.js)**
+
+```bash
+# Frontend + Backend Stack (Día 1)
+- React 18+ con Vite
+- Express.js 4+
+- Node.js runtime
+- CSS Grid + Flexbox
+- CSS Animations avanzadas
+- Responsive Design
+- JavaScript ES6+
+- React Hooks
+- React Router
+- REST API con Express
+````
+
+### **Para Día 2 de Competencia (PHP/Laravel)**
+
+```bash
+# Backend Stack
+- PHP 8.2+
+- Laravel 10+
+- SQLite database
+- Composer package manager
+- Blade templating
+- Eloquent ORM
+- Laravel Sanctum (auth)
+```
+
+### **VS Code Extensions Especializadas**
+
+#### **Para HTML/CSS/React/Express.js:**
+
+- ES7+ React/Redux/React-Native snippets
+- Auto Rename Tag
+- Bracket Pair Colorizer
+- CSS Grid Snippets
+- HTML CSS Support
+- Live Server
+- Prettier Code Formatter
+- REST Client (para testing APIs)
+- Thunder Client (Postman alternative)
+- Node.js Modules Intellisense
+- npm Intellisense
+
+#### **Para PHP/Laravel:**
+
+- PHP Intelephense
+- Laravel Extra Intellisense
+- Laravel Blade Snippets
+- Laravel goto view
+- Laravel Blade formatter
+- Composer
+- PHPUnit
+
+## 📊 Metodología de Evaluación
+
+### **Evaluación Continua Diaria**
+
+- ✅ **Speed Tests:** 30 minutos (evaluación técnica rápida)
+- ✅ **Prácticas Guiadas:** Feedback inmediato durante desarrollo
+- ✅ **Code Review:** Análisis de calidad y mejores prácticas
+- ✅ **Simulacros:** Condiciones reales de competencia
+
+### **Criterios de Evaluación WorldSkills**
+
+1. **Funcionalidad** (40%)
+2. **Calidad del Código** (25%)
+3. **Diseño y UX** (20%)
+4. **Performance** (10%)
+5. **Tiempo de Entrega** (5%)
+
+### **Sistema de Puntuación**
+
+- **Excelente:** 90-100 puntos
+- **Bueno:** 80-89 puntos
+- **Satisfactorio:** 70-79 puntos
+- **Necesita Mejora:** <70 puntos
+
+## 🎯 Objetivos de Aprendizaje por Día
+
+### **Competencias Día 1 (HTML/CSS/React/Express.js)**
+
+- ✅ Crear layouts complejos responsive en tiempo récord
+- ✅ Implementar animaciones CSS fluidas y profesionales
+- ✅ Desarrollar componentes React reutilizables
+- ✅ Manejar estado y eventos en React eficientemente
+- ✅ Consumir APIs REST con manejo de errores
+- ✅ Optimizar performance frontend
+- ✅ Crear APIs RESTful con Express.js rápidamente
+- ✅ Implementar middleware de autenticación JWT
+- ✅ Conectar frontend React con backend Express
+- ✅ Manejar CORS y configuración de servidor
+
+### **Competencias Día 2 (PHP/Laravel)**
+
+- ✅ Configurar proyecto Laravel desde cero rápidamente
+- ✅ Crear modelos, migraciones y relaciones Eloquent
+- ✅ Implementar CRUD completo con validaciones
+- ✅ Desarrollar authentication system seguro
+- ✅ Crear APIs REST con Laravel Sanctum
+- ✅ Manejar file uploads y storage
+
+## 🚀 Estrategias de Competencia
+
+### **Time Management**
+
+- **Planning:** 5 minutos inicial para estrategia
+- **Development:** 85% del tiempo en código
+- **Testing:** 10% del tiempo en validación
+- **Polish:** 5% final para refinamiento
+
+### **Code Quality Priorities**
+
+1. **Funcionalidad primero** - que funcione completamente
+2. **Clean code** - código legible y mantenible
+3. **Performance** - optimización donde sea crítico
+4. **Polish** - detalles visuales finales
+
+### **Error Prevention**
+
+- ✅ **Git commits frecuentes** cada 15-20 minutos
+- ✅ **Testing incremental** durante desarrollo
+- ✅ **Backup strategies** para recuperación rápida
+- ✅ **Code snippets** preparados para velocidad
+
+## 📱 Recursos de Apoyo
+
+### **Documentación de Referencia**
+
+- [React Official Docs](https://react.dev/)
+- [Laravel Documentation](https://laravel.com/docs)
+- [MDN Web Docs](https://developer.mozilla.org/)
+- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### **Herramientas Online**
+
+- **CodePen** para prototipado rápido CSS
+- **React DevTools** para debugging
+- **Laravel Telescope** para profiling
+- **Postman** para testing APIs
+
+### **Shortcuts y Snippets Preparados**
+
+- Componentes React base
+- Layouts CSS responsivos
+- Migrations Laravel comunes
+- Authentication boilerplate
+
+## 🏆 Preparación Mental y Física
+
+### **Rutina Pre-Competencia**
+
+- ✅ **Setup perfecto** de herramientas y shortcuts
+- ✅ **Warm-up coding** 30 min antes
+- ✅ **Review** de snippets y patrones comunes
+- ✅ **Mindset** positivo y enfoque en soluciones
+
+### **Durante la Competencia**
+
+- ✅ **Respiración** controlada en momentos de estrés
+- ✅ **Time awareness** constante sin obsesión
+- ✅ **Problem solving** sistemático
+- ✅ **Code quality** mantenido bajo presión
+
+---
+
+## 🎊 ¡Objetivo Final!
+
+**¡Formar competidores de élite capaces de destacar en WorldSkills 2025 con confianza, velocidad y excelencia técnica!**
+
+### **Metas Cuantificables:**
+
+- ✅ **Velocidad:** Completar tareas 20% más rápido que el promedio
+- ✅ **Calidad:** Código limpio con 0 errores críticos
+- ✅ **Funcionalidad:** 100% de requirements implementados
+- ✅ **Performance:** Aplicaciones optimizadas y responsivas
+- ✅ **Confianza:** Mindset ganador bajo presión
+
+¿Estás listo para comenzar este entrenamiento intensivo y convertirte en un campeón WorldSkills?
+
+**¡Empezamos mañana Lunes 14 de Julio con el Día 1! 🚀**

@@ -26,30 +26,1287 @@ Para configurar GitHub Copilot Chat en español:
 
 ---
 
-# 🤖 Instrucciones GitHub Copilot - Entrenamiento WorldSkills React/Express.js
+# 🤖 Instrucciones GitHub Copilot - Entrenamiento WorldSkills 2025
 
 ## 📋 Contexto del Proyecto
 
-Este es un **programa de entrenamiento Zero to Hero React/Express.js** diseñado para llevar a estudiantes desde principiante hasta nivel competitivo WorldSkills en 20 días. El proyecto se enfoca en aprendizaje intensivo y práctico con aplicaciones del mundo real.
+Este es un **programa de entrenamiento intensivo WorldSkills 2025** diseñado para preparar competidores de élite para la competencia del 28-29 de julio de 2025. El proyecto se enfoca en las tecnologías específicas de la competencia con entrenamiento práctico intensivo.
 
-### Estructura del Proyecto
+### Estructura de la Competencia WorldSkills 2025
 
-- **Estrategia de Entrenamiento**: Niveles progresivos desde conceptos básicos HTML/CSS hasta React/Express.js avanzado
-- **Audiencia Objetivo**: Estudiantes con conocimientos de HTML/CSS y JavaScript básico
-- **Meta**: Preparación competitiva para WorldSkills en desarrollo Full-Stack JavaScript
-- **Duración**: 20 días de entrenamiento intensivo (200 horas)
-- **Entorno**: Desarrollo React + Express.js basado en Docker con VS Code
-- **Stack Tecnológico**:
-  - **Frontend**: React.js con hooks modernos
-  - **Backend**: Express.js con Node.js
-  - **Base de Datos**: PostgreSQL o MongoDB
-  - **Styling**: CSS3, Bootstrap o Tailwind CSS
+- **Fecha de Competencia**: 28-29 Julio 2025
+- **Día 1 (28 julio)**: HTML/CSS Responsive + React.js
+- **Día 2 (29 julio)**: PHP/Laravel + SQLite
+- **Audiencia Objetivo**: Competidores nivel intermedio-avanzado
+- **Meta**: Excelencia técnica para medalla WorldSkills
+- **Duración Entrenamiento**: 12 días intensivos (72 horas)
+- **Entorno**: VS Code con extensiones especializadas
+
+### **Stack Tecnológico Específico**
+
+#### **Día 1 - Frontend Stack:**
+
+- **HTML5** semántico y accesible
+- **CSS3** Grid + Flexbox + Animations
+- **JavaScript ES6+** moderno
+- **React 18+** con Vite
+- **React Hooks** (useState, useEffect, useContext, custom hooks)
+- **React Router** para SPA
+- **Responsive Design** mobile-first
+
+#### **Día 2 - Backend Stack:**
+
+- **PHP 8.2+** con features modernas
+- **Laravel 10+** framework
+- **SQLite** database
+- **Composer** package manager
+- **Blade** templating engine
+- **Eloquent ORM** y migrations
+- **Laravel Sanctum** authentication
+
+## 🎯 METODOLOGÍA MVP - OBLIGATORIA EN TODO EL ENTRENAMIENTO
+
+### **IMPORTANTE: Enfoque MVP en Cada Generación de Código**
+
+**SIEMPRE** aplicar la metodología MVP (Minimum Viable Product) en tres fases:
+
+#### **🔧 FASE CORE (40% del tiempo) - LO ESENCIAL**
+
+- ✅ **Funcionalidad básica operativa sin errores**
+- ✅ **Estructura mínima pero correcta y semántica**
+- ✅ **Resultado inmediatamente evaluable y funcional**
+- ✅ **Sin dependencias complejas ni optimizaciones prematuras**
+
+#### **⚡ FASE ENHANCED (35% del tiempo) - FUNCIONALIDADES ADICIONALES**
+
+- ⚡ **Mejoras en experiencia del usuario**
+- ⚡ **Validaciones y manejo robusto de errores**
+- ⚡ **Funcionalidades secundarias importantes**
+- ⚡ **Interactividad y responsividad completa**
+
+#### **✨ FASE POLISH (25% del tiempo) - REFINAMIENTO**
+
+- ✨ **Optimizaciones de rendimiento**
+- ✨ **Mejoras visuales y microinteracciones**
+- ✨ **Funcionalidades avanzadas y testing**
+- ✨ **Documentación y accesibilidad completa**
+
+### **🏆 Reglas de Oro MVP para Copilot**
+
+1. **NUNCA** generar código que no sea inmediatamente funcional
+2. **SIEMPRE** priorizar funcionalidad sobre perfección visual
+3. **INCLUIR** comentarios explicando la fase MVP de cada sección
+4. **ESTRUCTURAR** el código para permitir iteración y mejora incremental
+5. **TIMEBOXING**: Estimar tiempo de desarrollo por fase
+6. **VALIDACIÓN**: Cada fase debe ser testeable independientemente
+
+### **📋 Estructura de Respuesta MVP**
+
+Cuando generes código, SIEMPRE usar esta estructura:
+
+```markdown
+## 🎯 [Nombre del Componente/Feature] - Implementación MVP
+
+### FASE CORE ✅ (Tiempo estimado: X minutos)
+
+[Código básico funcional]
+
+### FASE ENHANCED ⚡ (Tiempo estimado: X minutos)
+
+[Mejoras y funcionalidades adicionales]
+
+### FASE POLISH ✨ (Tiempo estimado: X minutos)
+
+[Optimizaciones y refinamientos]
+
+### 📝 Notas de Implementación MVP
+
+- **Prioridad 1**: [Funcionalidad más crítica]
+- **Prioridad 2**: [Segunda funcionalidad importante]
+- **Prioridad 3**: [Mejoras opcionales]
+```
 
 ## 🎯 Pautas para Generación de Código
 
-### **Estándares de Desarrollo React**
+### **Estándares HTML/CSS para Competencia WorldSkills**
 
-Al generar código React, siempre sigue estas convenciones:
+Al generar código HTML/CSS, siempre sigue estas convenciones competitivas:
+
+#### **1. HTML5 Semántico y Accesible**
+
+```html
+<!-- Siempre usa HTML5 semántico con ARIA labels -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Título Descriptivo - WorldSkills 2025</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <nav
+        role="navigation"
+        aria-label="Navegación principal">
+        <ul>
+          <li>
+            <a
+              href="#inicio"
+              aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      role="main"
+      id="contenido-principal">
+      <section aria-labelledby="titulo-seccion">
+        <h1 id="titulo-seccion">Productos Destacados</h1>
+        <div
+          class="grid-productos"
+          role="grid">
+          <!-- Contenido de productos -->
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Empresa. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
+```
+
+#### **2. CSS Grid y Flexbox Avanzado**
+
+```css
+/* Mobile-first responsive design con CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'nav'
+    'main'
+    'footer';
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: nav;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+      'header header'
+      'nav main'
+      'footer footer';
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 250px 1fr 200px;
+    grid-template-areas:
+      'header header header'
+      'nav main aside'
+      'footer footer footer';
+  }
+}
+
+/* Flexbox para componentes internos */
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+```
+
+#### **3. CSS Animations y Microinteractions**
+
+```css
+/* Animaciones de carga */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Loading spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--color-gris-claro);
+  border-top: 4px solid var(--color-primario);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Botones interactivos */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+```
+
+### **Estándares de Desarrollo React para WorldSkills**
+
+Al generar código React, siempre sigue estas convenciones competitivas aplicando el enfoque MVP:
+
+#### **1. Ejemplo MVP: ProductoCard Component**
+
+```jsx
+// 🎯 ProductoCard - Implementación MVP
+
+// ========== FASE CORE ✅ (15 minutos) ==========
+// Funcionalidad: Mostrar información básica del producto
+import React, { useState } from 'react';
+
+const ProductoCard = ({ producto }) => {
+  // Estado mínimo necesario
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Funcionalidad básica: agregar al carrito
+  const handleAddToCart = () => {
+    setIsLoading(true);
+    // Simulación básica - sin manejo de errores complejo
+    setTimeout(() => {
+      alert(`${producto.nombre} agregado al carrito`);
+      setIsLoading(false);
+    }, 1000);
+  };
+
+  return (
+    <div className="producto-card">
+      <img
+        src={producto.imagen}
+        alt={producto.nombre}
+      />
+      <h3>{producto.nombre}</h3>
+      <p>${producto.precio}</p>
+      <button
+        onClick={handleAddToCart}
+        disabled={isLoading}>
+        {isLoading ? 'Agregando...' : 'Agregar al Carrito'}
+      </button>
+    </div>
+  );
+};
+
+// ========== FASE ENHANCED ⚡ (20 minutos) ==========
+// Mejoras: Estado avanzado, manejo de errores, validaciones
+import React, { useState, useCallback } from 'react';
+
+const ProductoCardEnhanced = ({ producto, onAddToCart, onFavorite }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(producto.isFavorite);
+  const [error, setError] = useState(null);
+
+  // Manejo robusto de errores
+  const handleAddToCart = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+      await onAddToCart(producto.id);
+    } catch (err) {
+      setError('Error al agregar al carrito');
+      console.error('Error:', err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [producto.id, onAddToCart]);
+
+  const handleFavoriteToggle = useCallback(async () => {
+    try {
+      await onFavorite(producto.id, !isFavorite);
+      setIsFavorite(!isFavorite);
+    } catch (err) {
+      setError('Error al marcar como favorito');
+    }
+  }, [producto.id, isFavorite, onFavorite]);
+
+  return (
+    <article className="producto-card">
+      <div className="producto-imagen">
+        <img
+          src={producto.imagen}
+          alt={`Imagen de ${producto.nombre}`}
+        />
+        <button
+          className={`btn-favorito ${isFavorite ? 'activo' : ''}`}
+          onClick={handleFavoriteToggle}
+          aria-label={
+            isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'
+          }>
+          {isFavorite ? '❤️' : '🤍'}
+        </button>
+      </div>
+
+      <div className="producto-contenido">
+        <h3>{producto.nombre}</h3>
+        <p className="descripcion">{producto.descripcion}</p>
+        <p className="precio">${producto.precio}</p>
+
+        {error && <div className="error-message">{error}</div>}
+
+        <button
+          className="btn btn-primario"
+          onClick={handleAddToCart}
+          disabled={isLoading}>
+          {isLoading ? 'Agregando...' : 'Agregar al Carrito'}
+        </button>
+      </div>
+    </article>
+  );
+};
+
+// ========== FASE POLISH ✨ (15 minutos) ==========
+// Optimizaciones: useMemo, useCallback, accesibilidad completa
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+
+const ProductoCardOptimized = ({ producto, onAddToCart, onFavorite }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(producto.isFavorite);
+  const [imageError, setImageError] = useState(false);
+
+  // Memoización para performance - SOLO en fase POLISH
+  const precioFormateado = useMemo(() => {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+    }).format(producto.precio);
+  }, [producto.precio]);
+
+  // Callbacks optimizados
+  const handleAddToCart = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      await onAddToCart(producto.id);
+    } catch (error) {
+      console.error('Error al agregar al carrito:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [producto.id, onAddToCart]);
+
+  const handleImageError = useCallback(() => {
+    setImageError(true);
+  }, []);
+
+  return (
+    <article
+      className="producto-card"
+      role="article"
+      aria-labelledby={`producto-${producto.id}`}>
+      <div className="producto-imagen">
+        {!imageError ? (
+          <img
+            src={producto.imagen}
+            alt={`Imagen de ${producto.nombre}`}
+            loading="lazy"
+            onError={handleImageError}
+          />
+        ) : (
+          <div
+            className="imagen-placeholder"
+            aria-label="Imagen no disponible">
+            📦
+          </div>
+        )}
+      </div>
+
+      <div className="producto-contenido">
+        <header>
+          <h3 id={`producto-${producto.id}`}>{producto.nombre}</h3>
+          <p className="precio">{precioFormateado}</p>
+        </header>
+
+        <p className="descripcion">{producto.descripcion}</p>
+
+        <footer className="producto-acciones">
+          <button
+            className={`btn btn-favorito ${isFavorite ? 'activo' : ''}`}
+            onClick={handleFavoriteToggle}
+            aria-label={
+              isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'
+            }>
+            {isFavorite ? '❤️' : '🤍'}
+          </button>
+
+          <button
+            className="btn btn-primario"
+            onClick={handleAddToCart}
+            disabled={isLoading}
+            aria-label="Agregar al carrito de compras">
+            {isLoading ? 'Agregando...' : 'Agregar al Carrito'}
+          </button>
+        </footer>
+      </div>
+    </article>
+  );
+};
+
+// 📝 Notas de Implementación MVP:
+// - Prioridad 1: Renderizar producto y agregar al carrito (CORE)
+// - Prioridad 2: Favoritos y manejo de errores (ENHANCED)
+// - Prioridad 3: Optimización y accesibilidad (POLISH)
+
+export default React.memo(ProductoCardOptimized);
+```
+
+      role="article">
+      <div className="producto-imagen">
+        {!imageError ? (
+          <img
+            src={producto.imagen}
+            alt={`Imagen de ${producto.nombre}`}
+            loading="lazy"
+            onError={handleImageError}
+          />
+        ) : (
+          <div
+            className="imagen-placeholder"
+            aria-label="Imagen no disponible">
+            📦
+          </div>
+        )}
+      </div>
+
+      <div className="producto-contenido">
+        <header>
+          <h3>{producto.nombre}</h3>
+          <p className="precio">{precioFormateado}</p>
+        </header>
+
+        <p className="descripcion">{producto.descripcion}</p>
+
+        <footer className="producto-acciones">
+          <button
+            className={`btn btn-favorito ${isFavorite ? 'activo' : ''}`}
+            onClick={handleFavoriteToggle}
+            aria-label={
+              isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'
+            }>
+            {isFavorite ? '❤️' : '🤍'}
+          </button>
+
+          <button
+            className="btn btn-primario"
+            onClick={handleAddToCart}
+            disabled={isLoading}
+            aria-label="Agregar al carrito de compras">
+            {isLoading ? 'Agregando...' : 'Agregar al Carrito'}
+          </button>
+        </footer>
+      </div>
+    </article>
+
+);
+};
+
+export default React.memo(ProductoCard);
+
+````
+
+#### **2. Custom Hooks Reutilizables**
+
+```jsx
+// hooks/useApi.js - Hook personalizado para llamadas API
+import { useState, useEffect, useCallback } from 'react';
+
+const useApi = (url, options = {}) => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = useCallback(async () => {
+        try {
+            setLoading(true);
+            setError(null);
+
+            const response = await fetch(url, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...options.headers,
+                },
+                ...options,
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error ${response.status}: ${response.statusText}`);
+            }
+
+            const result = await response.json();
+            setData(result);
+        } catch (err) {
+            setError(err.message);
+            console.error('Error en API:', err);
+        } finally {
+            setLoading(false);
+        }
+    }, [url, options]);
+
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
+    const refetch = useCallback(() => {
+        fetchData();
+    }, [fetchData]);
+
+    return { data, loading, error, refetch };
+};
+
+export default useApi;
+
+// hooks/useLocalStorage.js - Hook para LocalStorage
+import { useState, useEffect } from 'react';
+
+const useLocalStorage = (key, initialValue) => {
+    const [storedValue, setStoredValue] = useState(() => {
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? JSON.parse(item) : initialValue;
+        } catch (error) {
+            console.error(`Error al leer ${key} de localStorage:`, error);
+            return initialValue;
+        }
+    });
+
+    const setValue = (value) => {
+        try {
+            const valueToStore = value instanceof Function ? value(storedValue) : value;
+            setStoredValue(valueToStore);
+            window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        } catch (error) {
+            console.error(`Error al guardar ${key} en localStorage:`, error);
+        }
+    };
+
+    return [storedValue, setValue];
+};
+
+export default useLocalStorage;
+````
+
+### **Estándares de Desarrollo PHP/Laravel para WorldSkills**
+
+Al generar código PHP/Laravel, siempre sigue estas convenciones competitivas aplicando el enfoque MVP:
+
+#### **1. Ejemplo MVP: Modelo Producto**
+
+```php
+<?php
+// 🎯 Modelo Producto - Implementación MVP
+
+// ========== FASE CORE ✅ (20 minutos) ==========
+// Funcionalidad: Modelo básico con campos esenciales
+// app/Models/Producto.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Producto extends Model
+{
+    protected $table = 'productos';
+
+    // Campos mínimos necesarios
+    protected $fillable = [
+        'nombre',
+        'precio',
+        'categoria_id'
+    ];
+
+    // Relación básica
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+
+    // Funcionalidad básica
+    public function getPrecioFormateadoAttribute()
+    {
+        return '$' . number_format($this->precio, 2);
+    }
+}
+
+// ========== FASE ENHANCED ⚡ (25 minutos) ==========
+// Mejoras: Validaciones, más campos, funcionalidades adicionales
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ProductoEnhanced extends Model
+{
+    use HasFactory;
+
+    protected $table = 'productos';
+
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'precio',
+        'categoria_id',
+        'imagen',
+        'stock',
+        'activo'
+    ];
+
+    protected $casts = [
+        'precio' => 'decimal:2',
+        'activo' => 'boolean',
+        'stock' => 'integer',
+    ];
+
+    // Relaciones mejoradas
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function pedidos()
+    {
+        return $this->belongsToMany(Pedido::class, 'pedido_productos')
+                    ->withPivot('cantidad', 'precio_unitario');
+    }
+
+    // Accessors y Mutators
+    public function getPrecioFormateadoAttribute()
+    {
+        return '$' . number_format($this->precio, 2, ',', '.');
+    }
+
+    public function setNombreAttribute($value)
+    {
+        $this->attributes['nombre'] = ucwords(strtolower($value));
+    }
+
+    // Scopes básicos
+    public function scopeActivos($query)
+    {
+        return $query->where('activo', true);
+    }
+
+    public function scopeEnStock($query)
+    {
+        return $query->where('stock', '>', 0);
+    }
+
+    // Métodos de negocio
+    public function estaDisponible()
+    {
+        return $this->activo && $this->stock > 0;
+    }
+}
+
+// ========== FASE POLISH ✨ (15 minutos) ==========
+// Optimizaciones: SoftDeletes, Factory, métodos avanzados, índices
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class ProductoOptimized extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    protected $table = 'productos';
+
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'precio',
+        'categoria_id',
+        'imagen',
+        'stock',
+        'activo'
+    ];
+
+    protected $casts = [
+        'precio' => 'decimal:2',
+        'activo' => 'boolean',
+        'stock' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+
+    protected $hidden = [
+        'deleted_at'
+    ];
+
+    // Relaciones optimizadas con eager loading
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function pedidos()
+    {
+        return $this->belongsToMany(Pedido::class, 'pedido_productos')
+                    ->withPivot('cantidad', 'precio_unitario')
+                    ->withTimestamps();
+    }
+
+    // Accessors avanzados
+    public function getPrecioFormateadoAttribute()
+    {
+        return '$' . number_format($this->precio, 2, ',', '.');
+    }
+
+    public function getImagenUrlAttribute()
+    {
+        return $this->imagen ? asset('storage/' . $this->imagen) : asset('images/no-imagen.png');
+    }
+
+    // Mutators con validación
+    public function setNombreAttribute($value)
+    {
+        $this->attributes['nombre'] = ucwords(strtolower(trim($value)));
+    }
+
+    // Scopes avanzados
+    public function scopeActivos($query)
+    {
+        return $query->where('activo', true);
+    }
+
+    public function scopeEnStock($query)
+    {
+        return $query->where('stock', '>', 0);
+    }
+
+    public function scopePorCategoria($query, $categoriaId)
+    {
+        return $query->where('categoria_id', $categoriaId);
+    }
+
+    public function scopeBuscarPorNombre($query, $nombre)
+    {
+        return $query->where('nombre', 'like', '%' . $nombre . '%');
+    }
+
+    // Métodos de negocio avanzados
+    public function reducirStock($cantidad)
+    {
+        if ($this->stock >= $cantidad) {
+            $this->stock -= $cantidad;
+            $this->save();
+            return true;
+        }
+        throw new \Exception('Stock insuficiente');
+    }
+
+    public function estaDisponible()
+    {
+        return $this->activo && $this->stock > 0;
+    }
+
+    public function calcularDescuento($porcentaje)
+    {
+        return $this->precio * (1 - $porcentaje / 100);
+    }
+}
+
+// 📝 Notas de Implementación MVP:
+// - Prioridad 1: Modelo funcional con campos básicos (CORE)
+// - Prioridad 2: Relaciones, scopes y métodos de negocio (ENHANCED)
+// - Prioridad 3: SoftDeletes, Factory, optimizaciones (POLISH)
+```
+
+    // Relaciones
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function pedidos()
+    {
+        return $this->belongsToMany(Pedido::class, 'pedido_productos')
+                    ->withPivot('cantidad', 'precio_unitario')
+                    ->withTimestamps();
+    }
+
+    // Accessors
+    public function getPrecioFormateadoAttribute()
+    {
+        return '$' . number_format($this->precio, 2, ',', '.');
+    }
+
+    public function getImagenUrlAttribute()
+    {
+        return $this->imagen ? asset('storage/' . $this->imagen) : asset('images/no-imagen.png');
+    }
+
+    // Mutators
+    public function setNombreAttribute($value)
+    {
+        $this->attributes['nombre'] = ucwords(strtolower($value));
+    }
+
+    // Scopes
+    public function scopeActivos($query)
+    {
+        return $query->where('activo', true);
+    }
+
+    public function scopeEnStock($query)
+    {
+        return $query->where('stock', '>', 0);
+    }
+
+    public function scopePorCategoria($query, $categoriaId)
+    {
+        return $query->where('categoria_id', $categoriaId);
+    }
+
+    // Métodos de negocio
+    public function reducirStock($cantidad)
+    {
+        if ($this->stock >= $cantidad) {
+            $this->stock -= $cantidad;
+            $this->save();
+            return true;
+        }
+        return false;
+    }
+
+    public function estaDisponible()
+    {
+        return $this->activo && $this->stock > 0;
+    }
+
+}
+
+````
+
+#### **2. Controladores Resource Completos**
+
+```php
+<?php
+// app/Http/Controllers/ProductoController.php
+namespace App\Http\Controllers;
+
+use App\Http\Requests\ProductoRequest;
+use App\Models\Producto;
+use App\Models\Categoria;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+class ProductoController extends Controller
+{
+    /**
+     * Mostrar lista de productos
+     */
+    public function index(Request $request)
+    {
+        $query = Producto::with('categoria');
+
+        // Filtros
+        if ($request->filled('categoria')) {
+            $query->porCategoria($request->categoria);
+        }
+
+        if ($request->filled('buscar')) {
+            $query->where('nombre', 'like', '%' . $request->buscar . '%');
+        }
+
+        if ($request->filled('activo')) {
+            $query->where('activo', $request->activo);
+        }
+
+        // Ordenamiento
+        $ordenPor = $request->get('orden_por', 'nombre');
+        $direccion = $request->get('direccion', 'asc');
+        $query->orderBy($ordenPor, $direccion);
+
+        // Paginación
+        $productos = $query->paginate(12);
+        $categorias = Categoria::activas()->get();
+
+        return view('productos.index', compact('productos', 'categorias'));
+    }
+
+    /**
+     * Mostrar producto individual
+     */
+    public function show(Producto $producto)
+    {
+        $producto->load('categoria');
+        $productosRelacionados = Producto::activos()
+            ->porCategoria($producto->categoria_id)
+            ->where('id', '!=', $producto->id)
+            ->limit(4)
+            ->get();
+
+        return view('productos.show', compact('producto', 'productosRelacionados'));
+    }
+
+    /**
+     * Mostrar formulario de creación
+     */
+    public function create()
+    {
+        $categorias = Categoria::activas()->orderBy('nombre')->get();
+        return view('productos.create', compact('categorias'));
+    }
+
+    /**
+     * Guardar nuevo producto
+     */
+    public function store(ProductoRequest $request)
+    {
+        try {
+            $datosProducto = $request->validated();
+
+            // Manejar subida de imagen
+            if ($request->hasFile('imagen')) {
+                $datosProducto['imagen'] = $request->file('imagen')->store('productos', 'public');
+            }
+
+            $producto = Producto::create($datosProducto);
+
+            return redirect()
+                ->route('productos.show', $producto)
+                ->with('success', 'Producto creado exitosamente.');
+
+        } catch (\Exception $e) {
+            return back()
+                ->withInput()
+                ->with('error', 'Error al crear el producto: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * Mostrar formulario de edición
+     */
+    public function edit(Producto $producto)
+    {
+        $categorias = Categoria::activas()->orderBy('nombre')->get();
+        return view('productos.edit', compact('producto', 'categorias'));
+    }
+
+    /**
+     * Actualizar producto
+     */
+    public function update(ProductoRequest $request, Producto $producto)
+    {
+        try {
+            $datosProducto = $request->validated();
+
+            // Manejar nueva imagen
+            if ($request->hasFile('imagen')) {
+                // Eliminar imagen anterior
+                if ($producto->imagen) {
+                    Storage::disk('public')->delete($producto->imagen);
+                }
+                $datosProducto['imagen'] = $request->file('imagen')->store('productos', 'public');
+            }
+
+            $producto->update($datosProducto);
+
+            return redirect()
+                ->route('productos.show', $producto)
+                ->with('success', 'Producto actualizado exitosamente.');
+
+        } catch (\Exception $e) {
+            return back()
+                ->withInput()
+                ->with('error', 'Error al actualizar el producto: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * Eliminar producto
+     */
+    public function destroy(Producto $producto)
+    {
+        try {
+            // Verificar si tiene pedidos asociados
+            if ($producto->pedidos()->count() > 0) {
+                return back()->with('error', 'No se puede eliminar el producto porque tiene pedidos asociados.');
+            }
+
+            // Eliminar imagen
+            if ($producto->imagen) {
+                Storage::disk('public')->delete($producto->imagen);
+            }
+
+            $producto->delete();
+
+            return redirect()
+                ->route('productos.index')
+                ->with('success', 'Producto eliminado exitosamente.');
+
+        } catch (\Exception $e) {
+            return back()->with('error', 'Error al eliminar el producto: ' . $e->getMessage());
+        }
+    }
+}
+````
+
+#### **3. Form Requests con Validaciones Avanzadas**
+
+```php
+<?php
+// app/Http/Requests/ProductoRequest.php
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class ProductoRequest extends FormRequest
+{
+    /**
+     * Determinar si el usuario está autorizado para esta request
+     */
+    public function authorize()
+    {
+        return true; // Ajustar según lógica de autorización
+    }
+
+    /**
+     * Reglas de validación
+     */
+    public function rules()
+    {
+        $productoId = $this->route('producto')?->id;
+
+        return [
+            'nombre' => [
+                'required',
+                'string',
+                'min:3',
+                'max:255',
+                Rule::unique('productos', 'nombre')->ignore($productoId)
+            ],
+            'descripcion' => 'required|string|min:10|max:1000',
+            'precio' => 'required|numeric|min:0|max:999999.99',
+            'categoria_id' => 'required|exists:categorias,id',
+            'imagen' => [
+                'nullable',
+                'image',
+                'mimes:jpeg,png,jpg,gif',
+                'max:2048' // 2MB máximo
+            ],
+            'stock' => 'required|integer|min:0|max:9999',
+            'activo' => 'boolean'
+        ];
+    }
+
+    /**
+     * Mensajes de validación personalizados
+     */
+    public function messages()
+    {
+        return [
+            'nombre.required' => 'El nombre del producto es obligatorio.',
+            'nombre.unique' => 'Ya existe un producto con este nombre.',
+            'nombre.min' => 'El nombre debe tener al menos 3 caracteres.',
+            'descripcion.required' => 'La descripción es obligatoria.',
+            'descripcion.min' => 'La descripción debe tener al menos 10 caracteres.',
+            'precio.required' => 'El precio es obligatorio.',
+            'precio.numeric' => 'El precio debe ser un número válido.',
+            'precio.min' => 'El precio no puede ser negativo.',
+            'categoria_id.required' => 'Debes seleccionar una categoría.',
+            'categoria_id.exists' => 'La categoría seleccionada no existe.',
+            'imagen.image' => 'El archivo debe ser una imagen.',
+            'imagen.mimes' => 'La imagen debe ser de tipo: jpeg, png, jpg o gif.',
+            'imagen.max' => 'La imagen no puede ser mayor a 2MB.',
+            'stock.required' => 'El stock es obligatorio.',
+            'stock.integer' => 'El stock debe ser un número entero.',
+            'stock.min' => 'El stock no puede ser negativo.'
+        ];
+    }
+
+    /**
+     * Atributos personalizados para errores
+     */
+    public function attributes()
+    {
+        return [
+            'categoria_id' => 'categoría',
+            'activo' => 'estado'
+        ];
+    }
+
+    /**
+     * Preparar datos antes de validación
+     */
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'activo' => $this->boolean('activo', true),
+            'precio' => $this->input('precio') ? (float) str_replace(',', '.', $this->input('precio')) : null
+        ]);
+    }
+}
+```
+
+#### **4. Migraciones y Seeders Profesionales**
+
+```php
+<?php
+// database/migrations/2025_01_01_000001_create_productos_table.php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('productos', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre')->unique();
+            $table->text('descripcion');
+            $table->decimal('precio', 10, 2);
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
+            $table->string('imagen')->nullable();
+            $table->integer('stock')->default(0);
+            $table->boolean('activo')->default(true);
+            $table->timestamps();
+            $table->softDeletes();
+
+            // Índices para optimización
+            $table->index('activo');
+            $table->index('categoria_id');
+            $table->index(['activo', 'stock']); // Índice compuesto
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('productos');
+    }
+};
+
+// database/seeders/ProductoSeeder.php
+namespace Database\Seeders;
+
+use App\Models\Producto;
+use App\Models\Categoria;
+use Illuminate\Database\Seeder;
+
+class ProductoSeeder extends Seeder
+{
+    public function run()
+    {
+        $categorias = Categoria::all();
+
+        $productos = [
+            [
+                'nombre' => 'iPhone 15 Pro',
+                'descripcion' => 'El último iPhone con chip A17 Pro y cámara profesional',
+                'precio' => 4999000,
+                'stock' => 25,
+                'categoria_id' => $categorias->where('nombre', 'Smartphones')->first()->id
+            ],
+            [
+                'nombre' => 'MacBook Air M3',
+                'descripcion' => 'Laptop ultradelgada con chip M3 y pantalla Retina',
+                'precio' => 5499000,
+                'stock' => 15,
+                'categoria_id' => $categorias->where('nombre', 'Laptops')->first()->id
+            ],
+            // ... más productos
+        ];
+
+        foreach ($productos as $producto) {
+            Producto::create($producto);
+        }
+
+        // También crear productos usando Factory
+        Producto::factory(50)->create();
+    }
+}
+```
 
 - usar pnpm (No npm)
 
@@ -986,64 +2243,70 @@ module.exports = mongoose.model('Producto', productoSchema);
 
 ## 🐳 Uso de Docker
 
-### **Comandos Docker para React/Express.js**
+### **Comandos Docker para React/Laravel**
 
 ```bash
 # Comandos Docker para desarrollo
 docker compose up -d
-docker compose exec frontend pnpm start
-docker compose exec backend pnpm run dev
+docker compose exec frontend pnpm run dev
+docker compose exec backend php artisan serve
 docker compose logs -f frontend
 docker compose logs -f backend
 
 # Para instalación de dependencias
 docker compose exec frontend pnpm install
-docker compose exec backend pnpm install
+docker compose exec backend composer install
+
+# Comandos Laravel específicos
+docker compose exec backend php artisan migrate
+docker compose exec backend php artisan db:seed
+docker compose exec backend php artisan make:model Producto -mc
+docker compose exec backend php artisan tinker
 ```
 
-### **Docker Compose React/Express.js**
+### **Docker Compose React/Laravel**
 
 ```yaml
-# docker-compose.yml - Configuración para React + Express + MongoDB
+# docker-compose.yml - Configuración para React + Laravel + SQLite
 version: '3.8'
 
 services:
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
-      - '3000:3000'
+      - '5173:5173' # Vite dev server
     volumes:
       - ./frontend:/app
       - /app/node_modules
     environment:
-      - REACT_APP_API_URL=http://localhost:3001
+      - VITE_API_URL=http://localhost:8000
     depends_on:
       - backend
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
-      - '3001:3001'
+      - '8000:8000'
     volumes:
-      - ./backend:/app
-      - /app/node_modules
+      - ./backend:/var/www/html
+      - ./backend/storage:/var/www/html/storage
+      - ./backend/bootstrap/cache:/var/www/html/bootstrap/cache
     environment:
-      - NODE_ENV=development
-      - MONGODB_URI=mongodb://mongo:27017/worldskills
-      - JWT_SECRET=tu_jwt_secret_aqui
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:latest
-    ports:
-      - '27017:27017'
-    volumes:
-      - mongo_data:/data/db
-    environment:
-      - MONGO_INITDB_DATABASE=worldskills
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:YOUR_APP_KEY_HERE
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/var/www/html/database/database.sqlite
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_DRIVER=sync
 
 volumes:
+  laravel_storage:
   mongo_data:
 ```
 

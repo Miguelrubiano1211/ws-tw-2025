@@ -1,0 +1,42 @@
+:root {
+  /* Colores primarios */
+  --color-primario: #007bff;
+  --color-secundario: #6c757d;
+  --color-exito: #28a745;
+  --color-peligro: #dc3545;
+  --color-advertencia: #ffc107;
+  
+  /* Colores neutros */
+  --color-blanco: #ffffff;
+  --color-negro: #000000;
+  --color-gris-claro: #f8f9fa;
+  --color-gris: #6c757d;
+  --color-gris-oscuro: #343a40;
+  
+  /* Tipografía */
+  --fuente-primaria: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fuente-monospace: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  
+  /* Espaciado */
+  --espacio-xs: 0.25rem;
+  --espacio-sm: 0.5rem;
+  --espacio-md: 1rem;
+  --espacio-lg: 1.5rem;
+  --espacio-xl: 3rem;
+  
+  /* Sombras */
+  --sombra-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --sombra-md: 0 4px 6px rgba(0,0,0,0.12);
+  --sombra-lg: 0 10px 25px rgba(0,0,0,0.15);
+  
+  /* Bordes */
+  --radio-sm: 0.25rem;
+  --radio-md: 0.5rem;
+  --radio-lg: 1rem;
+  
+  /* Breakpoints */
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+}
