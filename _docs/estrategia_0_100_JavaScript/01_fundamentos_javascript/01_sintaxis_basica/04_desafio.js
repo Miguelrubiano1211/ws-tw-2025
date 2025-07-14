@@ -3,19 +3,19 @@
 
 console.log('=== 🚀 DESAFÍO: PRESENTACIÓN PERSONAL ===');
 
-// TODO: Completa tu información personal
-const miNombre = ''; // Tu nombre completo
-const miEdad = 0; // Tu edad
-const miCiudad = ''; // Tu ciudad
-const miProfesion = ''; // Estudiante, Desarrollador, etc.
-const misHobbies = []; // Array con tus hobbies
-const miExperiencia = 0; // Años de experiencia (puede ser 0)
+// Completa tu información personal
+const miNombre = 'Miguel Angel Rubiano'; // Tu nombre completo
+const miEdad = 19; // Tu edad
+const miCiudad = 'Bogota'; // Tu ciudad
+const miProfesion = 'ADSON'; // Estudiante, Desarrollador, etc.
+const misHobbies = ["juegar voley, programar, estudiar"]; // Array con tus hobbies
+const miExperiencia = 1; // Años de experiencia (puede ser 0)
 
-// TODO: Información adicional
-const miEmail = ''; // Tu email
-const miTelefono = ''; // Tu teléfono
-const misHabilidades = []; // Lenguajes de programación que conoces
-const miObjetivo = ''; // Tu objetivo profesional
+//  Información adicional
+const miEmail = 'miguelangelrubianovargas@gmail.com'; // Tu email
+const miTelefono = '3227137443'; // Tu teléfono
+const misHabilidades = ["html, python, CSS, javaScript"]; // Lenguajes de programación que conoces
+const miObjetivo = 'tener un amplia de conocimiento y mejorar en mis habilidades de codificacion y ser un senior' ; // Tu objetivo profesional
 
 // 🎨 Función para crear separadores visuales
 function mostrarSeparador(titulo) {
@@ -110,3 +110,5 @@ console.log('\n🎉 ¡Presentación completada! 🎉');
 - [ ] Uso de template literals
 - [ ] Funciones auxiliares (mostrarSeparador)
 */
+
+
